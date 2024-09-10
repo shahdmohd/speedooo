@@ -133,18 +133,20 @@ class SignInViewController: UIViewController {
     }
 
     @objc func signInButtonPressed() {
-        // Handle sign-in action here
-        print("Sign In Button Pressed")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        homeViewController.modalPresentationStyle = .fullScreen
+        present(homeViewController, animated: true, completion: nil)
     }
 
     @objc func signUpButtonPressed() {
-        let signUpVC = SignUpViewController()
+        let signUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         signUpVC.modalPresentationStyle = .fullScreen
         present(signUpVC, animated: true, completion: nil)
     }
 
     func showNotification() {
-        let alert = UIAlertController(title: "Notification", message: "We Logged you out because you were inactive for 2 minutes - it’s to help your account secure", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Notification", message: "We logged you out because you were inactive for 2 minutes - it’s to help your account secure", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }

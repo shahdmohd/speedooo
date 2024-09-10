@@ -67,6 +67,7 @@ class FirstSignUpViewController: UIViewController {
         continueButton.setTitleColor(.white, for: .normal)
         continueButton.layer.cornerRadius = 6
         continueButton.translatesAutoresizingMaskIntoConstraints = false
+        continueButton.addTarget(self, action: #selector(continueButtonPressed), for: .touchUpInside)
         container.addSubview(continueButton)
 
         // "Already have an account?" Label and "Sign In" Button
@@ -138,6 +139,13 @@ class FirstSignUpViewController: UIViewController {
             signInButton.widthAnchor.constraint(equalToConstant: 200),
             signInButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+
+    @objc func continueButtonPressed() {
+        // Handle continue action here and transition to SignInViewController
+        let signInVC = SignInViewController()
+        signInVC.modalPresentationStyle = .fullScreen
+        present(signInVC, animated: true, completion: nil)
     }
 
     @objc func signInButtonPressed() {
