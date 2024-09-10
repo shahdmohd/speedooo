@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoreTVCell" rowHeight="57" id="cET-f5-Oyc" customClass="MoreTVCell" customModule="speedoTransfer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cET-f5-Oyc" id="SpL-Sf-3V9">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="fW3-yH-w0M">
+                        <rect key="frame" x="0.0" y="18" width="24" height="24"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chevron" translatesAutoresizingMaskIntoConstraints="NO" id="3RH-DV-Wfq">
+                        <rect key="frame" x="319" y="18" width="24" height="24"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9T-Lf-iCb">
+                        <rect key="frame" x="32" y="18" width="222" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="J9T-Lf-iCb" firstAttribute="height" secondItem="fW3-yH-w0M" secondAttribute="height" multiplier="1.425" constant="-10.200000000000003" id="3qI-8B-3xr"/>
+                    <constraint firstItem="fW3-yH-w0M" firstAttribute="height" secondItem="SpL-Sf-3V9" secondAttribute="height" multiplier="0.701754" constant="-18.105240000000002" id="5tE-uc-Vxl"/>
+                    <constraint firstItem="3RH-DV-Wfq" firstAttribute="height" secondItem="fW3-yH-w0M" secondAttribute="height" id="Jqp-0q-582"/>
+                    <constraint firstItem="3RH-DV-Wfq" firstAttribute="width" secondItem="fW3-yH-w0M" secondAttribute="width" multiplier="2.34483" constant="-32.275919999999999" id="Ydi-cu-KVZ"/>
+                    <constraint firstItem="3RH-DV-Wfq" firstAttribute="centerX" secondItem="fW3-yH-w0M" secondAttribute="centerX" constant="319" id="a7L-rT-35q"/>
+                    <constraint firstItem="fW3-yH-w0M" firstAttribute="width" secondItem="SpL-Sf-3V9" secondAttribute="width" multiplier="0.0845481" constant="-4.9999983000000014" id="dIo-Ti-unP"/>
+                    <constraint firstItem="J9T-Lf-iCb" firstAttribute="centerY" secondItem="fW3-yH-w0M" secondAttribute="centerY" id="fbB-OJ-L57"/>
+                    <constraint firstItem="J9T-Lf-iCb" firstAttribute="leading" secondItem="fW3-yH-w0M" secondAttribute="trailing" constant="8" id="hGC-oD-bvu"/>
+                    <constraint firstItem="J9T-Lf-iCb" firstAttribute="width" secondItem="fW3-yH-w0M" secondAttribute="width" multiplier="7.65517" constant="38.275919999999985" id="i3B-N4-2j0"/>
+                    <constraint firstItem="3RH-DV-Wfq" firstAttribute="top" secondItem="fW3-yH-w0M" secondAttribute="bottom" constant="-24" id="onl-GJ-HMq"/>
+                    <constraint firstItem="fW3-yH-w0M" firstAttribute="centerX" secondItem="SpL-Sf-3V9" secondAttribute="centerX" constant="-159.5" id="ykD-8d-lHD"/>
+                    <constraint firstItem="fW3-yH-w0M" firstAttribute="centerY" secondItem="SpL-Sf-3V9" secondAttribute="centerY" id="z6b-gL-FEm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="RGC-pR-sv8"/>
+            <connections>
+                <outlet property="actionContainer" destination="3RH-DV-Wfq" id="9eJ-6B-tq3"/>
+                <outlet property="iconContainerView" destination="fW3-yH-w0M" id="Rgo-Iw-gFq"/>
+                <outlet property="wordLabel" destination="J9T-Lf-iCb" id="JQj-Wt-XZB"/>
+            </connections>
+            <point key="canvasLocation" x="100.72463768115942" y="77.678571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Chevron" width="24" height="24"/>
+        <image name="user" width="24" height="24"/>
+    </resources>
+</document>
