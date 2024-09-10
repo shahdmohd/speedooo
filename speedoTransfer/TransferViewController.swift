@@ -1,7 +1,11 @@
 import UIKit
 
 class TransferViewController: UIViewController {
-
+    let profileVc = MoreProfileVC()
+    
+    static func create() -> TransferViewController {
+        return TransferViewController()
+    }
     // MARK: - UI Components
     let amountLabel: UILabel = {
         let label = UILabel()
@@ -70,8 +74,7 @@ class TransferViewController: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
-        view.backgroundColor = .white
+        profileVc.backgroundColor(to: self.view)
         setupViews()
         setupConstraints()
     }
@@ -132,23 +135,23 @@ class TransferViewController: UIViewController {
         ])
     }
 
-    // MARK: - Setup Navigation Bar
-    func setupNavigationBar() {
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .white
-        navigationItem.title = "Transfer"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
-        navigationController?.navigationBar.titleTextAttributes = [
-            .font: UIFont(name: "Inter-Medium", size: 20) ?? UIFont.systemFont(ofSize: 20),
-            .foregroundColor: UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
-        ]
-    }
-
-    @objc func cancelButtonTapped() {
-        navigationController?.popViewController(animated: true)
-    }
+//    // MARK: - Setup Navigation Bar
+//    func setupNavigationBar() {
+//        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.navigationBar.barTintColor = .white
+//        navigationItem.title = "Transfer"
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
+//        navigationController?.navigationBar.titleTextAttributes = [
+//            .font: UIFont(name: "Inter-Medium", size: 20) ?? UIFont.systemFont(ofSize: 20),
+//            .foregroundColor: UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
+//        ]
+//    }
+//
+//    @objc func cancelButtonTapped() {
+//        navigationController?.popViewController(animated: true)
+//    }
+//}
 }
-
 // Helper extension to add padding to UITextField
 extension UITextField {
     func setPadding() {

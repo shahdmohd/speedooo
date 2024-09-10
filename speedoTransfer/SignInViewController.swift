@@ -134,9 +134,9 @@ class SignInViewController: UIViewController {
 
     @objc func signInButtonPressed() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        homeViewController.modalPresentationStyle = .fullScreen
-        present(homeViewController, animated: true, completion: nil)
+        let tabbarvc = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+        tabbarvc.modalPresentationStyle = .fullScreen
+        present(tabbarvc, animated: true, completion: nil)
     }
 
     @objc func signUpButtonPressed() {

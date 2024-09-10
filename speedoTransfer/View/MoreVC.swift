@@ -10,36 +10,36 @@
 import UIKit
 
 class MoreVC: UIViewController {
-        
-    @IBOutlet weak var tableView: UITableView!
+    static func create() -> MoreVC {
+        return MoreVC()
+    }
+
+    @IBOutlet var moreTableView: UITableView!
     
     let icons : [String] = ["Group", "favorite", "user","help", "logout"]
     let tasks : [String] = ["Transfer From Website", "Favourites", "Profile","Help", "logout"]
-   // let media = Media()
     let profileVc = MoreProfileVC()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "More"
-//        navigationController?.title
         UINavigationBarAppearance().titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .regular)
-        ]
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-      
-
-        
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .regular)]
         // Register custom cell
-        tableView.register(UINib(nibName: "MoreTVCell", bundle: nil), forCellReuseIdentifier: "MoreTVCell")
+        moreTableView.register(UINib(nibName: "MoreTVCell", bundle: nil), forCellReuseIdentifier: "MoreTVCell")
+        
+        moreTableView.delegate = self
+        moreTableView.dataSource = self
+     
+        
+        
+        
         
         // Set the background color of the table view to clear
-        tableView.backgroundColor = UIColor.clear
+        moreTableView.backgroundColor = UIColor.clear
               
         // Reload the table view to reflect the data
-        tableView.reloadData()
+        moreTableView.reloadData()
         
         // Set the gradient background
         profileVc.backgroundColor(to: self.view)

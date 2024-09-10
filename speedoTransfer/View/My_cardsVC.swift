@@ -9,11 +9,13 @@ import UIKit
 
 class My_cardsVC: UIViewController {
     
-    let profileVc = MoreProfileVC()
+    static func create() -> My_cardsVC {
+        return My_cardsVC()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileVc.backgroundColor(to: self.view)
+        
         // Do any additional setup after loading the view.
     }
     

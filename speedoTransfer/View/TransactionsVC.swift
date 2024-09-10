@@ -8,10 +8,13 @@
 import UIKit
 
 class TransactionsVC: UIViewController {
-    let profileVc = MoreProfileVC()
+    
+    static func create() -> TransactionsVC {
+        return TransactionsVC()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileVc.backgroundColor(to: self.view)
+        //profileVc.backgroundColor(to: self.view)
         // Do any additional setup after loading the view.
     }
     

@@ -20,42 +20,7 @@ class MoreTVCell: UITableViewCell {
         self.backgroundColor = UIColor.clear
         self.contentView.backgroundColor = UIColor.clear
     }
-//    func setupIcons() {
-//        // Clear existing subviews in iconContainerView
-//        iconContainerView.subviews.forEach { $0.removeFromSuperview() }
-//
-//        let iconNames = ["favourites","Group", "help", "logout", "user"] // Names of images in Assets
-//        for (index, iconName) in iconNames.enumerated() {
-//            if let image = UIImage(named: iconName) {
-//                let imageView = UIImageView(image: image)
-//                imageView.contentMode = .scaleAspectFit
-//                imageView.translatesAutoresizingMaskIntoConstraints = false
-//                iconContainerView.addSubview(imageView)
-//
-//                // Layout constraints for each icon
-//                NSLayoutConstraint.activate([
-//                    imageView.topAnchor.constraint(equalTo: iconContainerView.topAnchor),
-//                    imageView.bottomAnchor.constraint(equalTo: iconContainerView.bottomAnchor),
-//                    imageView.widthAnchor.constraint(equalToConstant: 22),
-//                    imageView.heightAnchor.constraint(equalToConstant: 18)
-//                ])
-//
-//                // Set the position of each icon
-//                if index == 0 {
-//                    // First icon - attach to the leading edge
-//                    NSLayoutConstraint.activate([
-//                        imageView.leadingAnchor.constraint(equalTo: iconContainerView.leadingAnchor)
-//                    ])
-//                } else {
-//                    // Subsequent icons - position relative to the previous icon
-//                    let previousImageView = iconContainerView.subviews[index - 1] as! UIImageView
-//                    NSLayoutConstraint.activate([
-//                        imageView.leadingAnchor.constraint(equalTo: previousImageView.trailingAnchor, constant: 10) // Spacing between icons
-//                    ])
-//                }
-//            }
-//        }
-//    }
+
 
     func configureCell (media: Media){
         let imageName = media.image
@@ -67,6 +32,8 @@ class MoreTVCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
+
+
 }
+

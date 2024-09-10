@@ -1,6 +1,9 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    static func create() -> HomeViewController {
+        return HomeViewController()
+    }
     
     let profileImageView = UIImageView()
     let nameLabel = UILabel()
@@ -13,8 +16,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let tableView = UITableView()
     
     // Navigation bar container view
-    let navBarView = UIView()
-    let navBarItems = ["Home", "Transfer", "Transactions", "My Cards", "More"]
+    //let navBarView = UIView()
+    //let navBarItems = ["Home", "Transfer", "Transactions", "My Cards", "More"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         setupCurrentBalanceSection()
         setupRecentTransactionsSection()
         setupTableView()
-        setupNavigationBar()
+        //setupNavigationBar()
     }
     
     private func setupProfileSection() {
@@ -124,62 +127,64 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ])
     }
     
-    private func setupNavigationBar() {
-        // Set up the navigation bar at the bottom
-        navBarView.backgroundColor = UIColor.white
-        navBarView.layer.cornerRadius = 24
-        navBarView.layer.shadowColor = UIColor.black.cgColor
-        navBarView.layer.shadowOpacity = 0.1
-        navBarView.layer.shadowOffset = CGSize(width: 0, height: -2)
-        navBarView.layer.shadowRadius = 8
-        navBarView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(navBarView)
+//    private func setupNavigationBar() {
+//        // Set up the navigation bar at the bottom
+//        navBarView.backgroundColor = UIColor.white
+//        navBarView.layer.cornerRadius = 24
+//        navBarView.layer.shadowColor = UIColor.black.cgColor
+//        navBarView.layer.shadowOpacity = 0.1
+//        navBarView.layer.shadowOffset = CGSize(width: 0, height: -2)
+//        navBarView.layer.shadowRadius = 8
+//        navBarView.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(navBarView)
+//
+//        NSLayoutConstraint.activate([
+//            navBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            navBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            navBarView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+//            navBarView.heightAnchor.constraint(equalToConstant: 80)
+//        ])
         
-        NSLayoutConstraint.activate([
-            navBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            navBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            navBarView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            navBarView.heightAnchor.constraint(equalToConstant: 80)
-        ])
-        
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
-        stackView.alignment = .center
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        navBarView.addSubview(stackView)
-        
-        NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: navBarView.leadingAnchor, constant: 24),
-            stackView.trailingAnchor.constraint(equalTo: navBarView.trailingAnchor, constant: -24),
-            stackView.topAnchor.constraint(equalTo: navBarView.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: navBarView.bottomAnchor)
-        ])
-        
-        // Add nav bar items
-        for item in navBarItems {
-            let label = UILabel()
-            label.text = item
-            label.font = UIFont(name: "HelveticaNeue", size: 12)
-            label.textColor = UIColor.gray
-            label.textAlignment = .center
-            label.isUserInteractionEnabled = true
-            
-            // Add tap gesture recognizer to navigate
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(navBarItemTapped(_:)))
-            label.addGestureRecognizer(tapGesture)
-            
-            stackView.addArrangedSubview(label)
-        }
-    }
-    
-    @objc private func navBarItemTapped(_ sender: UITapGestureRecognizer) {
-        guard let label = sender.view as? UILabel, let item = label.text else { return }
-        
-        if item == "Transfer" {
-            performSegue(withIdentifier: "showTransfer", sender: self)
-        }
-    }
+//        let stackView = UIStackView()
+//        stackView.axis = .horizontal
+//        stackView.distribution = .equalSpacing
+//        stackView.alignment = .center
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        navBarView.addSubview(stackView)
+//
+//        NSLayoutConstraint.activate([
+//            stackView.leadingAnchor.constraint(equalTo: navBarView.leadingAnchor, constant: 24),
+//            stackView.trailingAnchor.constraint(equalTo: navBarView.trailingAnchor, constant: -24),
+//            stackView.topAnchor.constraint(equalTo: navBarView.topAnchor),
+//            stackView.bottomAnchor.constraint(equalTo: navBarView.bottomAnchor)
+//        ])
+//
+//        // Add nav bar items
+//        for item in navBarItems {
+//            let label = UILabel()
+//            label.text = item
+//            label.font = UIFont(name: "HelveticaNeue", size: 12)
+//            label.textColor = UIColor.gray
+//            label.textAlignment = .center
+//            label.isUserInteractionEnabled = true
+//
+//            // Add tap gesture recognizer to navigate
+//            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(navBarItemTapped(_:)))
+//            label.addGestureRecognizer(tapGesture)
+//
+//            stackView.addArrangedSubview(label)
+//        }
+//    }
+//
+//    @objc private func navBarItemTapped(_ sender: UITapGestureRecognizer) {
+//        guard let label = sender.view as? UILabel, let item = label.text else { return }
+//
+//        if item == "Transfer" {
+//            performSegue(withIdentifier: "TransferViewController", sender: self)
+////        }else if item == "Transactions"{
+////            performSegue(withIdentifier: "Transat", sender: self)
+////        }
+//    }
     
     // MARK: - TableView DataSource
     
@@ -195,3 +200,4 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
 }
+
