@@ -9,6 +9,7 @@ class ConfirmationViewController: UIViewController {
         
         profilevc.secondBackgroundColor(to: view)
         setupUI()
+        setupButtons() // Call the function to add the buttons
     }
 
     private func setupUI() {
@@ -76,38 +77,66 @@ class ConfirmationViewController: UIViewController {
         
         detailsStack.addArrangedSubview(fromView)
         detailsStack.addArrangedSubview(toView)
-        
-        // Buttons
-        let confirmButton = UIButton(type: .system)
-        confirmButton.setTitle("Confirm", for: .normal)
-        confirmButton.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1)
-        confirmButton.setTitleColor(.white, for: .normal)
-        confirmButton.layer.cornerRadius = 6
-        view.addSubview(confirmButton)
-        confirmButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func setupButtons() {
+        // Create Previous Button
+        let previousButton = createPreviousButton()
+        view.addSubview(previousButton)
         NSLayoutConstraint.activate([
-            confirmButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            confirmButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            confirmButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            confirmButton.heightAnchor.constraint(equalToConstant: 50)
+            previousButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            previousButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            previousButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            previousButton.heightAnchor.constraint(equalToConstant: 50)
         ])
-
+        
+        // Create Continue Button
+        let continueButton = createContinueButton()
+        view.addSubview(continueButton)
+        NSLayoutConstraint.activate([
+            continueButton.bottomAnchor.constraint(equalTo: previousButton.topAnchor, constant: -16),
+            continueButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            continueButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    func createContinueButton() -> UIButton {
+        let button = UIButton(type: .system)
+        button.setTitle("Continue", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
+        button.layer.cornerRadius = 8
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
+        return button
+    }
+    
+    @objc private func didTapContinueButton() {
+        let paymentVC = PaymentViewController()
+        navigationController?.pushViewController(paymentVC, animated: true)
+    }
+    
+    func createPreviousButton() -> UIButton {
         let previousButton = UIButton(type: .system)
         previousButton.setTitle("Previous", for: .normal)
         previousButton.setTitleColor(UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1), for: .normal)
         previousButton.layer.cornerRadius = 6
         previousButton.layer.borderColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1).cgColor
         previousButton.layer.borderWidth = 0.75
-        view.addSubview(previousButton)
         previousButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            previousButton.bottomAnchor.constraint(equalTo: confirmButton.topAnchor, constant: -16),
-            previousButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            previousButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            previousButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-    }
+        return previousButton
+    
+    previousButton.addTarget(self, action: #selector(didTappreviousButton), for: .touchUpInside)
+    return previousButton
+}
 
+
+@objc private func didTappreviousButton() {
+       let paymentVC = PaymentViewController()
+       navigationController?.popViewController(animated: true)
+
+   }
     private func createStepperView() -> UIStackView {
         let container = UIStackView()
         container.axis = .horizontal
@@ -170,7 +199,6 @@ class ConfirmationViewController: UIViewController {
         ])
         return line
     }
-    
     private func createInfoView(label: String, name: String, account: String, color: UIColor) -> UIView {
         let container = UIView()
         container.backgroundColor = color
@@ -215,3 +243,4 @@ class ConfirmationViewController: UIViewController {
         return container
     }
 }
+
