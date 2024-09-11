@@ -13,7 +13,7 @@ class TransferVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileVc.backgroundColor(to: self.view)
+        profileVc.secondBackgroundColor(to: self.view)
 
         // Do any additional setup after loading the view.
     }

@@ -53,13 +53,13 @@ extension TabBarVC {
     
         my_cardsNavigation.viewControllers = [mycardvc]
     }
-    
     private func moreVC() {
-        let morevc = MoreVC.create()
-        morevc.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "More"), selectedImage: UIImage(named: "More")?.withRenderingMode(.alwaysOriginal))
-        
-        moreNavigation.viewControllers = [morevc]
-    }
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let morevc = storyboard.instantiateViewController(withIdentifier: "MoreVC") as? MoreVC {
+                morevc.tabBarItem = UITabBarItem(title: "More", image: UIImage(named: "More"), selectedImage: UIImage(named: "More")?.withRenderingMode(.alwaysOriginal))
+                moreNavigation.viewControllers = [morevc]
+            }
+        }
 
     
 

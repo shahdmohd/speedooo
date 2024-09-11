@@ -1,29 +1,31 @@
+//OnboardingViewController.swift
+
 //
-//  VC1ViewController.swift
-//  try
+//  OnboardingViewController.swift
+//  SimpleOnboardingDemo
 //
-//  Created by 1234 on 10/09/2024.
+//  Created by jrasmusson on 2021-01-08.
 //
 
 import UIKit
 
-class onboardingViewController: UIViewController {
-
+class OnboardingViewController: UIViewController {
+    
     let stackView = UIStackView()
+    
     let imageView = UIImageView()
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
-
     
-    init(imageName: String, titleText: String, subtitleText: String){
+    init(imageName: String, titleText: String, subtitleText: String) {
         super.init(nibName: nil, bundle: nil)
         imageView.image = UIImage(named: imageName)
         titleLabel.text = titleText
         subtitleLabel.text = subtitleText
-        
     }
+    
     required init?(coder: NSCoder) {
-        fatalError("init(code:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -31,8 +33,11 @@ class onboardingViewController: UIViewController {
         style()
         layout()
     }
+}
+
+extension OnboardingViewController {
     
-    func style(){
+    func style() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -47,10 +52,25 @@ class onboardingViewController: UIViewController {
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .body)
         subtitleLabel.textAlignment = .center
-        subtitleLabel.numberOfLines = 0
-
-    }
-    func layout(){
         
+        subtitleLabel.numberOfLines = 0
+    }
+        
+    func layout() {
+        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(subtitleLabel)
+        
+        view.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            imageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            
+            subtitleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: subtitleLabel.trailingAnchor, multiplier: 2),
+        ])
     }
 }

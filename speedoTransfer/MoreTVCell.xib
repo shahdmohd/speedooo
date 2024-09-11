@@ -45,10 +45,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="RGC-pR-sv8"/>
+            <gestureRecognizers/>
             <connections>
-                <outlet property="actionContainer" destination="3RH-DV-Wfq" id="9eJ-6B-tq3"/>
-                <outlet property="iconContainerView" destination="fW3-yH-w0M" id="Rgo-Iw-gFq"/>
-                <outlet property="wordLabel" destination="J9T-Lf-iCb" id="JQj-Wt-XZB"/>
+                <outlet property="actionContainer" destination="3RH-DV-Wfq" id="v5x-1I-pAg"/>
+                <outlet property="iconContainerView" destination="fW3-yH-w0M" id="Pue-xj-cDz"/>
+                <outlet property="wordLabel" destination="J9T-Lf-iCb" id="ItV-dq-iOG"/>
             </connections>
             <point key="canvasLocation" x="100.72463768115942" y="77.678571428571431"/>
         </tableViewCell>

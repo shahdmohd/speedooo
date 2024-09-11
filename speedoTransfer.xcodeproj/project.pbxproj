@@ -23,12 +23,11 @@
 		7C40FB2B2C8E283700A55D81 /* TransferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB2A2C8E283700A55D81 /* TransferVC.swift */; };
 		7C40FB2D2C8E287800A55D81 /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */; };
 		7C40FB302C8E2B5600A55D81 /* My_cardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB2F2C8E2B5600A55D81 /* My_cardsVC.swift */; };
-		7C6EA3BD2C907A33001A3611 /* VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3B82C907A33001A3611 /* VC3.swift */; };
-		7C6EA3BE2C907A33001A3611 /* VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3B92C907A33001A3611 /* VC1.swift */; };
-		7C6EA3BF2C907A33001A3611 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3BA2C907A33001A3611 /* VC2.swift */; };
+		7C4BFFFB2C91877E00AA2C53 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4BFFFA2C91877E00AA2C53 /* FavouriteVC.swift */; };
 		7C6EA3C02C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */; };
-		7C6EA3C12C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3BC2C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift */; };
 		7C6EA3DC2C90A0E9001A3611 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3DB2C90A0E9001A3611 /* TabBarVC.swift */; };
+		7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */; };
+		7CA1B5602C919983001FC9EB /* FavouritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */; };
 		7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB462CF2C812CD400C6F795 /* AppDelegate.swift */; };
 		7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462D82C812CD600C6F795 /* Assets.xcassets */; };
 		7CB462DC2C812CD600C6F795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462DA2C812CD600C6F795 /* LaunchScreen.storyboard */; };
@@ -67,12 +66,11 @@
 		7C40FB2A2C8E283700A55D81 /* TransferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferVC.swift; sourceTree = "<group>"; };
 		7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
 		7C40FB2F2C8E2B5600A55D81 /* My_cardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_cardsVC.swift; sourceTree = "<group>"; };
-		7C6EA3B82C907A33001A3611 /* VC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC3.swift; sourceTree = "<group>"; };
-		7C6EA3B92C907A33001A3611 /* VC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
-		7C6EA3BA2C907A33001A3611 /* VC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
+		7C4BFFFA2C91877E00AA2C53 /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
 		7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DemoViewController.swift 15-50-55-050.swift"; sourceTree = "<group>"; };
-		7C6EA3BC2C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "onBoardingVC.swift 15-50-55-051.swift"; sourceTree = "<group>"; };
 		7C6EA3DB2C90A0E9001A3611 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesListViewController.swift; sourceTree = "<group>"; };
 		7CB462CC2C812CD400C6F795 /* speedoTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speedoTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB462CF2C812CD400C6F795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CB462D62C812CD400C6F795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */,
+				7C4BFFFA2C91877E00AA2C53 /* FavouriteVC.swift */,
 				7C40FB222C8E223000A55D81 /* MoreProfileVC.swift */,
 				7C40FB2A2C8E283700A55D81 /* TransferVC.swift */,
 				7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */,
@@ -132,11 +131,8 @@
 		7C6EA3B72C907A33001A3611 /* untitled folder */ = {
 			isa = PBXGroup;
 			children = (
-				7C6EA3B82C907A33001A3611 /* VC3.swift */,
-				7C6EA3B92C907A33001A3611 /* VC1.swift */,
-				7C6EA3BA2C907A33001A3611 /* VC2.swift */,
 				7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */,
-				7C6EA3BC2C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift */,
+				7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */,
 			);
 			path = "untitled folder";
 			sourceTree = "<group>";
@@ -164,6 +160,7 @@
 			children = (
 				7C6EA3B72C907A33001A3611 /* untitled folder */,
 				7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */,
+				7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */,
 				7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */,
 				7C40FB242C8E242B00A55D81 /* Media.swift */,
 				7C40FB2E2C8E2AC700A55D81 /* View */,
@@ -315,13 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6EA3BD2C907A33001A3611 /* VC3.swift in Sources */,
 				6A0B332A2C908FA800CFADFC /* FirstSignUpViewController.swift in Sources */,
 				7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */,
 				6A0B33202C908E9000CFADFC /* TransactionCell.swift in Sources */,
 				7C40FB302C8E2B5600A55D81 /* My_cardsVC.swift in Sources */,
 				6A0B33282C908FA500CFADFC /* HomeViewController.swift in Sources */,
 				7C40FB1D2C8DCF5800A55D81 /* MoreVC.swift in Sources */,
+				7CA1B5602C919983001FC9EB /* FavouritesListViewController.swift in Sources */,
+				7C4BFFFB2C91877E00AA2C53 /* FavouriteVC.swift in Sources */,
 				6A0B33222C908F8100CFADFC /* SignUpViewController.swift in Sources */,
 				7C40FB202C8DD0B600A55D81 /* MoreTVCell.swift in Sources */,
 				6A0B33262C908FA300CFADFC /* SignInViewController.swift in Sources */,
@@ -330,13 +328,11 @@
 				6A0B33242C908FA000CFADFC /* TransferViewController.swift in Sources */,
 				7C40FB232C8E223000A55D81 /* MoreProfileVC.swift in Sources */,
 				7C40FB2B2C8E283700A55D81 /* TransferVC.swift in Sources */,
-				7C6EA3C12C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift in Sources */,
-				7C6EA3BE2C907A33001A3611 /* VC1.swift in Sources */,
+				7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */,
 				7C40FB252C8E242B00A55D81 /* Media.swift in Sources */,
 				7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */,
 				7C6EA3DC2C90A0E9001A3611 /* TabBarVC.swift in Sources */,
 				7C40FB2D2C8E287800A55D81 /* TransactionsVC.swift in Sources */,
-				7C6EA3BF2C907A33001A3611 /* VC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

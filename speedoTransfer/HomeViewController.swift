@@ -1,6 +1,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     static func create() -> HomeViewController {
         return HomeViewController()
     }
@@ -15,20 +16,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let viewAllButton = UIButton()
     let tableView = UITableView()
     
-    // Navigation bar container view
-    //let navBarView = UIView()
-    //let navBarItems = ["Home", "Transfer", "Transactions", "My Cards", "More"]
+    let profileVc = MoreProfileVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        profileVc.secondBackgroundColor(to: self.view)
+
         view.backgroundColor = .white
         
         setupProfileSection()
         setupCurrentBalanceSection()
         setupRecentTransactionsSection()
         setupTableView()
-        //setupNavigationBar()
     }
     
     private func setupProfileSection() {
@@ -79,7 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             currentBalanceView.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 16),
             currentBalanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             currentBalanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            currentBalanceView.heightAnchor.constraint(equalToConstant: 100),
+            currentBalanceView.heightAnchor.constraint(equalToConstant: 123),
             
             currentBalanceTitleLabel.topAnchor.constraint(equalTo: currentBalanceView.topAnchor, constant: 16),
             currentBalanceTitleLabel.leadingAnchor.constraint(equalTo: currentBalanceView.leadingAnchor, constant: 16),
@@ -104,8 +103,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         view.addSubview(viewAllButton)
         
         NSLayoutConstraint.activate([
-            recentTransactionsLabel.topAnchor.constraint(equalTo: currentBalanceView.bottomAnchor, constant: 16),
-            recentTransactionsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            recentTransactionsLabel.topAnchor.constraint(equalTo: currentBalanceView.bottomAnchor, constant: 24),
+            recentTransactionsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             
             viewAllButton.centerYAnchor.constraint(equalTo: recentTransactionsLabel.centerYAnchor),
             viewAllButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
@@ -120,84 +119,30 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: recentTransactionsLabel.bottomAnchor, constant: 8),
+            tableView.topAnchor.constraint(equalTo: recentTransactionsLabel.bottomAnchor, constant: 16),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 16)
         ])
     }
-    
-//    private func setupNavigationBar() {
-//        // Set up the navigation bar at the bottom
-//        navBarView.backgroundColor = UIColor.white
-//        navBarView.layer.cornerRadius = 24
-//        navBarView.layer.shadowColor = UIColor.black.cgColor
-//        navBarView.layer.shadowOpacity = 0.1
-//        navBarView.layer.shadowOffset = CGSize(width: 0, height: -2)
-//        navBarView.layer.shadowRadius = 8
-//        navBarView.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(navBarView)
-//
-//        NSLayoutConstraint.activate([
-//            navBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            navBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            navBarView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-//            navBarView.heightAnchor.constraint(equalToConstant: 80)
-//        ])
-        
-//        let stackView = UIStackView()
-//        stackView.axis = .horizontal
-//        stackView.distribution = .equalSpacing
-//        stackView.alignment = .center
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        navBarView.addSubview(stackView)
-//
-//        NSLayoutConstraint.activate([
-//            stackView.leadingAnchor.constraint(equalTo: navBarView.leadingAnchor, constant: 24),
-//            stackView.trailingAnchor.constraint(equalTo: navBarView.trailingAnchor, constant: -24),
-//            stackView.topAnchor.constraint(equalTo: navBarView.topAnchor),
-//            stackView.bottomAnchor.constraint(equalTo: navBarView.bottomAnchor)
-//        ])
-//
-//        // Add nav bar items
-//        for item in navBarItems {
-//            let label = UILabel()
-//            label.text = item
-//            label.font = UIFont(name: "HelveticaNeue", size: 12)
-//            label.textColor = UIColor.gray
-//            label.textAlignment = .center
-//            label.isUserInteractionEnabled = true
-//
-//            // Add tap gesture recognizer to navigate
-//            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(navBarItemTapped(_:)))
-//            label.addGestureRecognizer(tapGesture)
-//
-//            stackView.addArrangedSubview(label)
-//        }
-//    }
-//
-//    @objc private func navBarItemTapped(_ sender: UITapGestureRecognizer) {
-//        guard let label = sender.view as? UILabel, let item = label.text else { return }
-//
-//        if item == "Transfer" {
-//            performSegue(withIdentifier: "TransferViewController", sender: self)
-////        }else if item == "Transactions"{
-////            performSegue(withIdentifier: "Transat", sender: self)
-////        }
-//    }
     
     // MARK: - TableView DataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5 // Placeholder count for transactions
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
         cell.titleLabel.text = "Transaction \(indexPath.row + 1)" // Placeholder transaction title
         cell.subtitleLabel.text = "Card used: Visa" // Placeholder card info
-        cell.amountLabel.text = "-EGP 500" // Placeholder transaction amount
+        cell.amountLabel.text = "EGP 500"
+        cell.amountLabel.textColor = .red
         return cell
     }
+    
+    // Set the height for each row
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 83
+    }
 }
-

@@ -42,7 +42,7 @@ class MoreVC: UIViewController {
         moreTableView.reloadData()
         
         // Set the gradient background
-        profileVc.backgroundColor(to: self.view)
+        profileVc.secondBackgroundColor(to: self.view)
     }
     
 }
@@ -51,6 +51,7 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
     // This function is related to delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+      
     }
     
     // Both these functions are for Data Source
@@ -66,7 +67,17 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
         let text = tasks[indexPath.row]
         let icon = icons[indexPath.row]
         cell.configureCell(media: Media(title: text, image: icon))
-        
+        cell.delegate = self
         return cell
     }
+}
+extension MoreVC: MoreTVCellDelegate {
+    func didTapCell(_ cell: MoreTVCell) {
+        let indexPath = moreTableView.indexPath(for: cell)
+                
+                if let index = indexPath?.row, tasks[index] == "Profile" {
+                    let profileVC = MoreProfileVC.create() // Create the profile view controller
+                    navigationController?.pushViewController(profileVC, animated: true)
+                }
+            }
 }

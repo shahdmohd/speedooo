@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Om9-Ff-xho">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +13,7 @@
             <objects>
                 <viewController storyboardIdentifier="MoreVC" id="27O-Py-doy" customClass="MoreVC" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vqA-oA-0WQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WJ6-rg-dbc">
@@ -37,14 +38,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KI5-6P-Dh8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5645" y="84"/>
+            <point key="canvasLocation" x="6555.072463768116" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--More ProfileVC-->
         <scene sceneID="bsF-Ve-8MB">
             <objects>
-                <viewController id="G7F-FJ-byN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreProfileVC" id="G7F-FJ-byN" customClass="MoreProfileVC" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmC-f6-5gx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="avK-7U-siL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,14 +53,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhd-kk-Mlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6600" y="84"/>
+            <point key="canvasLocation" x="7212" y="84"/>
+        </scene>
+        <!--FavouriteVC-->
+        <scene sceneID="al5-nA-Y3L">
+            <objects>
+                <viewController storyboardIdentifier="FavouriteVC" id="K1v-l4-vnd" customClass="FavouriteVC" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SiV-fp-ubw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your favourite list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-hv-rFN">
+                                <rect key="frame" x="20" y="135" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-jE-rda">
+                                <rect key="frame" x="20" y="189" width="374" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ejd-FD-VuT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d3D-hv-rFN" firstAttribute="top" secondItem="ejd-FD-VuT" secondAttribute="top" constant="103" id="Fw0-wo-Gkr"/>
+                            <constraint firstItem="ejd-FD-VuT" firstAttribute="trailing" secondItem="c4a-jE-rda" secondAttribute="trailing" constant="20" id="Wbm-Pr-srT"/>
+                            <constraint firstItem="c4a-jE-rda" firstAttribute="leading" secondItem="ejd-FD-VuT" secondAttribute="leading" constant="20" id="YaB-gU-iGs"/>
+                            <constraint firstItem="d3D-hv-rFN" firstAttribute="leading" secondItem="ejd-FD-VuT" secondAttribute="leading" constant="186" id="eYX-sM-ZqP"/>
+                            <constraint firstItem="c4a-jE-rda" firstAttribute="height" secondItem="SiV-fp-ubw" secondAttribute="height" multiplier="0.743304" constant="7" id="icM-4f-EhX"/>
+                            <constraint firstItem="ejd-FD-VuT" firstAttribute="trailing" secondItem="d3D-hv-rFN" secondAttribute="trailing" constant="186" id="tZm-NE-GNO"/>
+                            <constraint firstItem="c4a-jE-rda" firstAttribute="top" secondItem="d3D-hv-rFN" secondAttribute="top" constant="54" id="ytE-e0-Lmz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWV-vA-MEQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8208.6956521739139" y="58.928571428571423"/>
         </scene>
         <!--Demo View Controller-->
         <scene sceneID="Ti1-fR-um8">
             <objects>
                 <viewController storyboardIdentifier="DemoViewController" id="TOY-tF-uqi" customClass="DemoViewController" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jiz-2z-2cn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fkD-di-592"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,69 +104,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDP-DW-nki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7549" y="106"/>
-        </scene>
-        <!--VC1-->
-        <scene sceneID="Gql-CF-gCd">
-            <objects>
-                <viewController storyboardIdentifier="Vc1" id="fBk-SO-SlI" customClass="VC1" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AUD-Cb-EPk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9J-XZ-Bze">
-                                <rect key="frame" x="174" y="498" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bKq-aU-bxo"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ugO-Yb-bRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8212" y="106"/>
-        </scene>
-        <!--VC3-->
-        <scene sceneID="zPJ-g4-Gji">
-            <objects>
-                <viewController storyboardIdentifier="VC3" id="rdu-1g-CY1" customClass="VC3" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wDy-rP-oHv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ydf-Ow-tU1"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ItH-Ad-DLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9551" y="120"/>
-        </scene>
-        <!--VC2-->
-        <scene sceneID="oRX-Ex-Fx5">
-            <objects>
-                <viewController storyboardIdentifier="VC2" id="ggl-BF-Fsk" customClass="VC2" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qj4-d9-hXR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="i6S-3T-pvq"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C59-Jc-oKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8836" y="105"/>
+            <point key="canvasLocation" x="-530" y="74"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Nkc-Rd-Owi">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fuw-OX-GpW" customClass="HomeViewController" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zbs-z6-sRg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="hAD-7q-qAf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,7 +127,7 @@
             <objects>
                 <viewController storyboardIdentifier="TransferViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dFM-hw-qXr" customClass="TransferViewController" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJl-ot-UHy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Ujj-YA-CxG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -179,7 +161,7 @@
             <objects>
                 <viewController storyboardIdentifier="TabBarVC" id="Zam-om-VPj" customClass="TabBarVC" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KED-I1-3HR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="WHj-VK-lQn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -194,7 +176,7 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Om9-Ff-xho" customClass="SignUpViewController" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQP-Mm-e6C">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="I4G-Wo-Seq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -209,7 +191,7 @@
             <objects>
                 <viewController storyboardIdentifier="FirstSignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WQN-kv-PmO" customClass="FirstSignUpViewController" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wc0-fw-N1F">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="yeT-7d-tuG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -224,7 +206,7 @@
             <objects>
                 <viewController storyboardIdentifier="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vg2-pu-g1n" customClass="SignInViewController" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adO-3l-c9T">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="NnH-On-0gW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -234,25 +216,31 @@
             </objects>
             <point key="canvasLocation" x="2313" y="84"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GED-WW-ilv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wpr-e6-8T6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="52c-YM-OdS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="27O-Py-doy" kind="relationship" relationship="rootViewController" id="quQ-BA-6KA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAP-Hy-Ane" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5644.9275362318849" y="83.705357142857139"/>
+        </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

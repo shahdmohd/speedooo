@@ -8,21 +8,42 @@
 import UIKit
 
 class MoreProfileVC: UIViewController {
+    static func create() -> MoreProfileVC {
+        return MoreProfileVC()
+    }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundColor(to: self.view)
-    }
+        title = "Profile"
+        secondBackgroundColor(to: self.view)
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
+                navigationItem.leftBarButtonItem = backButton
+            }
+            
+            @objc func backButtonTapped() {
+                // Pop back to MoreVC
+                navigationController?.popViewController(animated: true)
+            }
 
+    
+    
+    
     // MARK: - BackGround Color
-    public func backgroundColor(to view: UIView) {
+    public func secondBackgroundColor(to view: UIView) {
         let gradientColor = UIColor.bankMasrGradient(frame: view.bounds)
         view.layer.addSublayer(gradientColor)
         view.layer.insertSublayer(gradientColor, at: 0)
     }
-}
 
+    // MARK: - BackGround Color
+    public func firstbackgroundColor(to view: UIView) {
+        let gradientColor = UIColor.firstBMGrad(frame: view.bounds)
+        view.layer.addSublayer(gradientColor)
+        view.layer.insertSublayer(gradientColor, at: 0)
+    }
+
+}
 // UIColor extension for hex colors
 extension UIColor {
     // Hex initializer
@@ -48,6 +69,18 @@ extension UIColor {
         // Define the two colors for bankMasr
         gradientColor.colors = [
             UIColor(hex: "#FFF8E7").cgColor,  // Light Yellow
+            UIColor(hex: "#FFEAEE").cgColor   // Soft Pink
+        ]
+        
+        return gradientColor
+    }
+    static func firstBMGrad(frame: CGRect) -> CAGradientLayer {
+        let gradientColor = CAGradientLayer()
+        gradientColor.frame = frame
+        
+        // Define the two colors for bankMasr
+        gradientColor.colors = [
+            UIColor(hex: "#FFFFFF").cgColor,  // White
             UIColor(hex: "#FFEAEE").cgColor   // Soft Pink
         ]
         

@@ -2,9 +2,11 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+        let profileVc = MoreProfileVC()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        profileVc.firstbackgroundColor(to: self.view)
         view.backgroundColor = UIColor(red: 1, green: 0.92, blue: 0.93, alpha: 1)
         
         // Title Label
