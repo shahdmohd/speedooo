@@ -243,8 +243,16 @@ class TransferViewController: UIViewController {
         button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
+
+        view.addSubview(button)
         return button
     }
+    @objc private func didTapContinueButton() {
+           let confirmationVC = ConfirmationViewController()
+           navigationController?.pushViewController(confirmationVC, animated: true)
+        
+       }
     
     @objc func favoritesButtonTapped() {
         let favoritesListView = FavoritesListViewController()
