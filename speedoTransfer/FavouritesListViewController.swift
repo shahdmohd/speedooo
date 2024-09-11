@@ -8,12 +8,14 @@ class FavoritesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        // Ensure preferredContentSize is set correctly
+        preferredContentSize = CGSize(width: 375, height: 515)
     }
 
     private func setupUI() {
         view.backgroundColor = .white
         title = "Favorites"
-
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -27,6 +29,12 @@ class FavoritesListViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        // Ensure preferredContentSize is set correctly
+        preferredContentSize = CGSize(width: 375, height: 515)
     }
 }
 
