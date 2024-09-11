@@ -85,12 +85,12 @@ extension MoreVC: MoreTVCellDelegate {
                                }
                                
                            // Check for "Favourites" task and navigate to FavouriteVC
-                           } else if selectedTask == "Favourites" {
-                               // Instantiate FavouriteVC using storyboard
-                               let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
-                               if let favouriteVC = storyboard.instantiateViewController(withIdentifier: "FavouriteVC") as? FavouriteVC {
-                                   navigationController?.pushViewController(favouriteVC, animated: true)
-                               }
+               } else if selectedTask == "Favourites" {
+                   // Instantiate FavouriteVC using storyboard
+                   let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+                   if let favouriteVC = storyboard.instantiateViewController(withIdentifier: "FavouriteVC") as? FavouriteVC {
+                       navigationController?.pushViewController(favouriteVC, animated: true)
+                   }
         }
     }
 }

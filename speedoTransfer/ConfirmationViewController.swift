@@ -125,18 +125,16 @@ class ConfirmationViewController: UIViewController {
         previousButton.layer.borderColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1).cgColor
         previousButton.layer.borderWidth = 0.75
         previousButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        previousButton.addTarget(self, action: #selector(didTappreviousButton), for: .touchUpInside)
+        
         return previousButton
-    
-    previousButton.addTarget(self, action: #selector(didTappreviousButton), for: .touchUpInside)
-    return previousButton
-}
+    }
 
+    @objc private func didTappreviousButton() {
+        navigationController?.popViewController(animated: true)
+    }
 
-@objc private func didTappreviousButton() {
-       let paymentVC = PaymentViewController()
-       navigationController?.popViewController(animated: true)
-
-   }
     private func createStepperView() -> UIStackView {
         let container = UIStackView()
         container.axis = .horizontal
