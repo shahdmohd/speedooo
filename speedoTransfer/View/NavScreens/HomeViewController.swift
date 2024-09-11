@@ -67,26 +67,56 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         profileImageView.tintColor = .gray
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
         profileImageView.contentMode = .scaleAspectFit
-        view.addSubview(profileImageView)
+        profileImageView.widthAnchor.constraint(equalToConstant: 64).isActive = true // Increase image size
+        profileImageView.heightAnchor.constraint(equalToConstant: 64).isActive = true // Increase image size
+        
+        // Welcome Label
+        let welcomeLabel = UILabel()
+        welcomeLabel.font = UIFont(name: "HelveticaNeue", size: 14)
+        welcomeLabel.textColor = UIColor.gray
+        welcomeLabel.text = "Welcome" // Static welcome text
+        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         
         // Name Label
         nameLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 16)
         nameLabel.textColor = UIColor.black
         nameLabel.text = "Hello, Asmaa Dosuky" // Placeholder name
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(nameLabel)
         
+        // Create vertical stack view for the labels
+        let labelsStackView = UIStackView(arrangedSubviews: [welcomeLabel, nameLabel])
+        labelsStackView.axis = .vertical
+        labelsStackView.spacing = 8 // Increase space between welcomeLabel and nameLabel
+        labelsStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Notification Icon
+        let notificationImageView = UIImageView()
+        notificationImageView.image = UIImage(systemName: "bell.fill")
+        notificationImageView.tintColor = .gray
+        notificationImageView.translatesAutoresizingMaskIntoConstraints = false
+        notificationImageView.contentMode = .scaleAspectFit
+        notificationImageView.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        notificationImageView.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        
+        // Create horizontal stack view for the profile image, labels stack, and notification icon
+        let mainStackView = UIStackView(arrangedSubviews: [profileImageView, labelsStackView, notificationImageView])
+        mainStackView.axis = .horizontal
+        mainStackView.alignment = .center
+        mainStackView.spacing = 16 // Space between the image, labels, and notification icon
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add the stack view to the view
+        view.addSubview(mainStackView)
+        
+        // Set constraints for the main stack view
         NSLayoutConstraint.activate([
-            profileImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            profileImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            profileImageView.widthAnchor.constraint(equalToConstant: 48),
-            profileImageView.heightAnchor.constraint(equalToConstant: 48),
-            
-            nameLabel.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 12)
+            mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
     }
-    
+
+
     private func setupCurrentBalanceSection() {
         currentBalanceView.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
         currentBalanceView.layer.cornerRadius = 8
@@ -164,13 +194,63 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-        cell.titleLabel.text = "Transaction \(indexPath.row + 1)" // Placeholder transaction title
-        cell.subtitleLabel.text = "Card used: Visa" // Placeholder card info
-        cell.amountLabel.text = "EGP 500"
-        cell.amountLabel.textColor = .red
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath)
+        
+        // Remove any existing subviews to avoid duplication
+        for subview in cell.contentView.subviews {
+            subview.removeFromSuperview()
+        }
+        
+        // Create the image view
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "bank")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        // Create the labels
+        let titleLabel = UILabel()
+        titleLabel.text = "Transaction \(indexPath.row + 1)" // Example transaction title
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        
+        let subtitleLabel = UILabel()
+        subtitleLabel.text = "Card used: Visa" // Example card info
+        subtitleLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        subtitleLabel.textColor = .gray
+        
+        let amountLabel = UILabel()
+        amountLabel.text = "EGP 500" // Example amount
+        amountLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        amountLabel.textColor = .red
+        amountLabel.textAlignment = .right
+        
+        // Create a vertical stack for the labels
+        let labelsStackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+        labelsStackView.axis = .vertical
+        labelsStackView.spacing = 4
+        
+        // Create the main horizontal stack view
+        let mainStackView = UIStackView(arrangedSubviews: [imageView, labelsStackView, amountLabel])
+        mainStackView.axis = .horizontal
+        mainStackView.alignment = .center
+        mainStackView.spacing = 16
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add the stack view to the cell's content view
+        cell.contentView.addSubview(mainStackView)
+        
+        // Set constraints for the stack view to fit the cell's content view
+        NSLayoutConstraint.activate([
+            mainStackView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 16),
+            mainStackView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: -16),
+            mainStackView.topAnchor.constraint(equalTo: cell.contentView.topAnchor, constant: 8),
+            mainStackView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -8)
+        ])
+        
         return cell
     }
+
     
     // Set the height for each row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
