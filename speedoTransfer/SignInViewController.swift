@@ -1,7 +1,37 @@
 import UIKit
+import Alamofire
+
+func authenticate(email: String, password: String) {
+    let url = "https://speedotransfer-backend-production-7875.up.railway.app/api/v1/auth/authenticate"
+    let parameters: [String: String] = [
+        "email": email,
+        "password": password
+    ]
+    
+    AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default)
+        .validate()
+        .response { response in
+            switch response.result {
+            case .success(let data):
+                if let data = data, let responseString = String(data: data, encoding: .utf8) {
+                    print("Response: \(responseString)")
+                    // Handle the successful response here
+                    
+                } else {
+                    print("No data received")
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+                // Handle the error here
+            }
+        }
+}
 
 class SignInViewController: UIViewController {
 
+    let emailField = UITextField()
+    let passwordField = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -38,7 +68,14 @@ class SignInViewController: UIViewController {
         emailLabel.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(emailLabel)
 
-        let emailField = createTextField(placeholder: "Enter your email address")
+        emailField.placeholder = "Enter your email address"
+        emailField.font = UIFont(name: "HelveticaNeue", size: 14)
+        emailField.borderStyle = .roundedRect
+        emailField.layer.borderWidth = 0.75
+        emailField.layer.cornerRadius = 6
+        emailField.layer.borderColor = UIColor(red: 0.69, green: 0.69, blue: 0.68, alpha: 1.0).cgColor
+        emailField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
+        emailField.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(emailField)
 
         // Password Label and Field
@@ -49,8 +86,15 @@ class SignInViewController: UIViewController {
         passwordLabel.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(passwordLabel)
 
-        let passwordField = createTextField(placeholder: "Enter your password")
+        passwordField.placeholder = "Enter your password"
+        passwordField.font = UIFont(name: "HelveticaNeue", size: 14)
+        passwordField.borderStyle = .roundedRect
+        passwordField.layer.borderWidth = 0.75
+        passwordField.layer.cornerRadius = 6
+        passwordField.layer.borderColor = UIColor(red: 0.69, green: 0.69, blue: 0.68, alpha: 1.0).cgColor
+        passwordField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
         passwordField.isSecureTextEntry = true
+        passwordField.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(passwordField)
 
         // Sign In Button
@@ -133,6 +177,17 @@ class SignInViewController: UIViewController {
     }
 
     @objc func signInButtonPressed() {
+        guard let email = emailField.text, !email.isEmpty,
+              let password = passwordField.text, !password.isEmpty else {
+            // Show an error if fields are empty
+            let alert = UIAlertController(title: "Error", message: "Please enter both email and password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+
+        authenticate(email: email, password: password)
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabbarvc = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
         tabbarvc.modalPresentationStyle = .fullScreen
@@ -155,20 +210,6 @@ class SignInViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 120) { // 120 seconds = 2 minutes
             self.showNotification()
         }
-    }
-
-    // Helper function to create text fields
-    func createTextField(placeholder: String) -> UITextField {
-        let textField = UITextField()
-        textField.placeholder = placeholder
-        textField.font = UIFont(name: "HelveticaNeue", size: 14)
-        textField.borderStyle = .roundedRect
-        textField.layer.borderWidth = 0.75
-        textField.layer.cornerRadius = 6
-        textField.layer.borderColor = UIColor(red: 0.69, green: 0.69, blue: 0.68, alpha: 1.0).cgColor
-        textField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
     }
 
     override func viewDidLayoutSubviews() {

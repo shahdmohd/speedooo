@@ -1,11 +1,37 @@
 import UIKit
+import Alamofire
+import Foundation
+
+struct Transaction: Codable {
+    let id: String
+    let senderAccount: String
+    let receiverName: String
+    let status: String
+    let amount: Double
+}
+func fetchTransactions(completion: @escaping ([Transaction]?) -> Void) {
+    let url = "http://speedotransfer-backend-production-7875.up.railway.app/api/v1/account/getAllTransactions"
+    
+    AF.request(url)
+        .validate()
+        .responseDecodable(of: [Transaction].self) { response in
+            switch response.result {
+            case .success(let transactions):
+                completion(transactions)
+            case .failure(let error):
+                print("Error fetching transactions: \(error)")
+                completion(nil)
+            }
+        }
+}
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     static func create() -> HomeViewController {
         return HomeViewController()
     }
-    
+    private var transactions: [Transaction] = []
+
     let profileImageView = UIImageView()
     let nameLabel = UILabel()
     let currentBalanceView = UIView()
@@ -21,16 +47,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         profileVc.secondBackgroundColor(to: self.view)
-
+        fetchTransactions { [weak self] transactions in
+            DispatchQueue.main.async {
+                self?.transactions = transactions ?? []
+            }}
         view.backgroundColor = .white
-        
+
         setupProfileSection()
         setupCurrentBalanceSection()
         setupRecentTransactionsSection()
         setupTableView()
+        print(self.transactions)
     }
     
     private func setupProfileSection() {
+        
         // Profile Image
         profileImageView.image = UIImage(systemName: "person.circle.fill")
         profileImageView.tintColor = .gray

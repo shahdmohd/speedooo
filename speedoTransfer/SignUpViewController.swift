@@ -1,5 +1,4 @@
 import UIKit
-import Alamofire
 
 class SignUpViewController: UIViewController {
     
@@ -9,7 +8,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         profileVc.firstbackgroundColor(to: self.view)
         view.backgroundColor = UIColor(red: 1, green: 0.92, blue: 0.93, alpha: 1)
-        
+                
         // Title Label
         let titleLabel = UILabel()
         titleLabel.text = "Sign Up"
