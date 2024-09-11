@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WJ6-rg-dbc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WJ6-rg-dbc">
                                 <rect key="frame" x="16" y="78" width="382" height="770"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -64,28 +64,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your favourite list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-hv-rFN">
-                                <rect key="frame" x="20" y="135" width="374" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <rect key="frame" x="20" y="96" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-jE-rda">
-                                <rect key="frame" x="20" y="189" width="374" height="673"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-jE-rda">
+                                <rect key="frame" x="20" y="137" width="374" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ejd-FD-VuT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="d3D-hv-rFN" firstAttribute="top" secondItem="ejd-FD-VuT" secondAttribute="top" constant="103" id="Fw0-wo-Gkr"/>
+                            <constraint firstItem="d3D-hv-rFN" firstAttribute="top" secondItem="ejd-FD-VuT" secondAttribute="top" constant="52" id="Fw0-wo-Gkr"/>
                             <constraint firstItem="ejd-FD-VuT" firstAttribute="trailing" secondItem="c4a-jE-rda" secondAttribute="trailing" constant="20" id="Wbm-Pr-srT"/>
                             <constraint firstItem="c4a-jE-rda" firstAttribute="leading" secondItem="ejd-FD-VuT" secondAttribute="leading" constant="20" id="YaB-gU-iGs"/>
-                            <constraint firstItem="d3D-hv-rFN" firstAttribute="leading" secondItem="ejd-FD-VuT" secondAttribute="leading" constant="186" id="eYX-sM-ZqP"/>
-                            <constraint firstItem="c4a-jE-rda" firstAttribute="height" secondItem="SiV-fp-ubw" secondAttribute="height" multiplier="0.743304" constant="7" id="icM-4f-EhX"/>
-                            <constraint firstItem="ejd-FD-VuT" firstAttribute="trailing" secondItem="d3D-hv-rFN" secondAttribute="trailing" constant="186" id="tZm-NE-GNO"/>
-                            <constraint firstItem="c4a-jE-rda" firstAttribute="top" secondItem="d3D-hv-rFN" secondAttribute="top" constant="54" id="ytE-e0-Lmz"/>
+                            <constraint firstItem="d3D-hv-rFN" firstAttribute="leading" secondItem="ejd-FD-VuT" secondAttribute="leading" constant="20" id="eYX-sM-ZqP"/>
+                            <constraint firstItem="c4a-jE-rda" firstAttribute="height" secondItem="SiV-fp-ubw" secondAttribute="height" multiplier="0.743304" constant="58.99961600000006" id="icM-4f-EhX"/>
+                            <constraint firstItem="ejd-FD-VuT" firstAttribute="trailing" secondItem="d3D-hv-rFN" secondAttribute="trailing" constant="20" id="tZm-NE-GNO"/>
+                            <constraint firstItem="c4a-jE-rda" firstAttribute="top" secondItem="d3D-hv-rFN" secondAttribute="top" constant="41" id="ytE-e0-Lmz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favLabel" destination="d3D-hv-rFN" id="ULW-zo-MrV"/>
+                        <outlet property="moreFavListTableView" destination="c4a-jE-rda" id="hun-nF-BmB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWV-vA-MEQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

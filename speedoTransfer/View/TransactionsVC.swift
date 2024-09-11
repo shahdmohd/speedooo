@@ -12,6 +12,7 @@ class TransactionsVC: UIViewController {
     static func create() -> TransactionsVC {
         return TransactionsVC()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //profileVc.backgroundColor(to: self.view)

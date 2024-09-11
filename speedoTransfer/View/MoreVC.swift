@@ -73,11 +73,25 @@ extension MoreVC: UITableViewDelegate, UITableViewDataSource {
 }
 extension MoreVC: MoreTVCellDelegate {
     func didTapCell(_ cell: MoreTVCell) {
-        let indexPath = moreTableView.indexPath(for: cell)
-                
-                if let index = indexPath?.row, tasks[index] == "Profile" {
-                    let profileVC = MoreProfileVC.create() // Create the profile view controller
-                    navigationController?.pushViewController(profileVC, animated: true)
-                }
-            }
+        // Find the index path of the selected cell
+        if let indexPath = moreTableView.indexPath(for: cell) {
+            let selectedTask = tasks[indexPath.row]
+            
+            // Check for "Profile" task and navigate to MoreProfileVC
+            if selectedTask == "Profile" {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+                               if let profileVC = storyboard.instantiateViewController(withIdentifier: "MoreProfileVC") as? MoreProfileVC {
+                                   navigationController?.pushViewController(profileVC, animated: true)
+                               }
+                               
+                           // Check for "Favourites" task and navigate to FavouriteVC
+                           } else if selectedTask == "Favourites" {
+                               // Instantiate FavouriteVC using storyboard
+                               let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+                               if let favouriteVC = storyboard.instantiateViewController(withIdentifier: "FavouriteVC") as? FavouriteVC {
+                                   navigationController?.pushViewController(favouriteVC, animated: true)
+                               }
+        }
+    }
+}
 }

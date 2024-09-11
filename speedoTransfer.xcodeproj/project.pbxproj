@@ -27,6 +27,8 @@
 		7C6EA3C02C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */; };
 		7C6EA3DC2C90A0E9001A3611 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3DB2C90A0E9001A3611 /* TabBarVC.swift */; };
 		7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */; };
+		7C9415052C91B4DB00FED40B /* favListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */; };
+		7C9415062C91B4DB00FED40B /* favListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */; };
 		7CA1B5602C919983001FC9EB /* FavouritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */; };
 		7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB462CF2C812CD400C6F795 /* AppDelegate.swift */; };
 		7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462D82C812CD600C6F795 /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DemoViewController.swift 15-50-55-050.swift"; sourceTree = "<group>"; };
 		7C6EA3DB2C90A0E9001A3611 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favListCellTableViewCell.swift; sourceTree = "<group>"; };
+		7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favListCellTableViewCell.xib; sourceTree = "<group>"; };
 		7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesListViewController.swift; sourceTree = "<group>"; };
 		7CB462CC2C812CD400C6F795 /* speedoTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speedoTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB462CF2C812CD400C6F795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 			children = (
 				7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */,
 				7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */,
+				7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */,
+				7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */,
 			);
 			path = "untitled folder";
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 				6A0B331C2C908AEE00CFADFC /* Main.storyboard in Resources */,
 				7CB462DC2C812CD600C6F795 /* LaunchScreen.storyboard in Resources */,
 				7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */,
+				7C9415062C91B4DB00FED40B /* favListCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +338,7 @@
 				7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */,
 				7C40FB252C8E242B00A55D81 /* Media.swift in Sources */,
 				7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */,
+				7C9415052C91B4DB00FED40B /* favListCellTableViewCell.swift in Sources */,
 				7C6EA3DC2C90A0E9001A3611 /* TabBarVC.swift in Sources */,
 				7C40FB2D2C8E287800A55D81 /* TransactionsVC.swift in Sources */,
 			);
