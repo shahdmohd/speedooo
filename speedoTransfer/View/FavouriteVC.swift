@@ -1,83 +1,38 @@
-//
-//  FavouriteVC.swift
-//  speedoTransfer
-//
-//  Created by 1234 on 11/09/2024.
-//
-
 import UIKit
 
 class FavouriteVC: UIViewController {
-static func create() -> FavouriteVC {
-        return FavouriteVC()
-    }
-    @IBOutlet weak var favLabel: UILabel!
+
     @IBOutlet weak var moreFavListTableView: UITableView!
-    let profileVc = MoreProfileVC()
+
+    let users = [
+        User(name: "User One", accountNumber: "1234567890", bankImageName: "bank1"),
+        User(name: "User Two", accountNumber: "0987654321", bankImageName: "bank2")
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        title = "Favourites"
-        profileVc.secondBackgroundColor(to: self.view)
-        moreFavListTableView.backgroundColor = UIColor.clear
 
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
-                navigationItem.leftBarButtonItem = backButton
-            }
-            
-            @objc func backButtonTapped() {
-                // Pop back to MoreVC
-                navigationController?.popViewController(animated: true)
-            }
-
-    
-        // Register custom cell
-        moreFavListTableView.register(UINib(nibName: "favListCell", bundle: nil), forCellReuseIdentifier: "favListCell"))
-        
+        moreFavListTableView.register(UINib(nibName: "favListCellTableViewCell", bundle: nil), forCellReuseIdentifier: "favListCellTableViewCell")
         moreFavListTableView.delegate = self
         moreFavListTableView.dataSource = self
-     
-        
-        
-        
-        
-        // Set the background color of the table view to clear
-        moreTableView.backgroundColor = UIColor.clear
-              
-        // Reload the table view to reflect the data
-        moreTableView.reloadData()
-        
-        // Set the gradient background
-        profileVc.secondBackgroundColor(to: self.view)
+    }
 }
 
+extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
 
-extension MoreVC: UITableViewDelegate, UITableViewDataSource {
-// This function is related to delegate
-func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
-  
-}
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favListCellTableViewCell", for: indexPath) as! favListCellTableViewCell
+        let user = users[indexPath.row]
+        cell.configureCell(user: user)
+        return cell
+    }
 
-// Both these functions are for Data Source
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return tasks.count
-}
-
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MoreTVCell", for: indexPath) as! MoreTVCell
-    
-    // Configure the cell with the corresponding text from the array
-    let text = tasks[indexPath.row]
-    let icon = icons[indexPath.row]
-    cell.configureCell(media: Media(title: text, image: icon))
-    cell.delegate = self
-    return cell
-}
-}
-    
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        // Perform action when row is selected
+    }
 }

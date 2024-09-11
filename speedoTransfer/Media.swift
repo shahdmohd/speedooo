@@ -10,3 +10,4 @@ struct Media{
     let title: String
     let image: String
 }
+
