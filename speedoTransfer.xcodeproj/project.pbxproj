@@ -38,6 +38,8 @@
 		7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB462CF2C812CD400C6F795 /* AppDelegate.swift */; };
 		7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462D82C812CD600C6F795 /* Assets.xcassets */; };
 		7CB462DC2C812CD600C6F795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462DA2C812CD600C6F795 /* LaunchScreen.storyboard */; };
+		7CE881CE2C922CBB004FBD19 /* ErrorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE881CD2C922CBB004FBD19 /* ErrorVC.swift */; };
+		7CE881D02C922D1C004FBD19 /* InternetIssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE881CF2C922D1C004FBD19 /* InternetIssueVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		7CB462DD2C812CD600C6F795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CB462E22C812CD600C6F795 /* speedoTransferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speedoTransferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB462EC2C812CD600C6F795 /* speedoTransferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speedoTransferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE881CD2C922CBB004FBD19 /* ErrorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorVC.swift; sourceTree = "<group>"; };
+		7CE881CF2C922D1C004FBD19 /* InternetIssueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIssueVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,8 @@
 				6A540F752C908263003C14B8 /* SceneDelegate.swift */,
 				6A0B331F2C908E9000CFADFC /* TransactionCell.swift */,
 				7CB462DD2C812CD600C6F795 /* Info.plist */,
+				7CE881CD2C922CBB004FBD19 /* ErrorVC.swift */,
+				7CE881CF2C922D1C004FBD19 /* InternetIssueVC.swift */,
 			);
 			path = speedoTransfer;
 			sourceTree = "<group>";
@@ -351,8 +357,10 @@
 				6A0B33262C908FA300CFADFC /* SignInViewController.swift in Sources */,
 				7C6EA3C02C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift in Sources */,
 				6ADCC26C2C91E403007F05F0 /* PaymentViewController.swift in Sources */,
+				7CE881D02C922D1C004FBD19 /* InternetIssueVC.swift in Sources */,
 				6A0B331B2C9089C500CFADFC /* SceneDelegate.swift in Sources */,
 				6A0B33242C908FA000CFADFC /* TransferViewController.swift in Sources */,
+				7CE881CE2C922CBB004FBD19 /* ErrorVC.swift in Sources */,
 				7C40FB232C8E223000A55D81 /* MoreProfileVC.swift in Sources */,
 				7C40FB2B2C8E283700A55D81 /* TransferVC.swift in Sources */,
 				7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */,
