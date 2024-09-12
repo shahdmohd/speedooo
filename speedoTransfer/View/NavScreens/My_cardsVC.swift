@@ -11,12 +11,14 @@ class My_cardsVC: UIViewController {
     
     static func create() -> My_cardsVC {
         return My_cardsVC()
+        
     }
-    
+    let profilevc = MoreProfileVC()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "MY Cards "
         // Do any additional setup after loading the view.
+        profilevc.secondBackgroundColor(to: view.self)
     }
     
 
