@@ -1,4 +1,15 @@
 import UIKit
+import Alamofire
+
+// Model for Transaction data
+struct TransferTransaction: Codable {
+    let id: Int
+    let senderAccount: String
+    let receiverName: String
+    let receiverAccount: String
+    let status: String
+    let amount: Double
+}
 
 class TransferViewController: UIViewController {
 
@@ -65,8 +76,37 @@ class TransferViewController: UIViewController {
             continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             continueButton.heightAnchor.constraint(equalToConstant: 50),
         ])
+
+        // Fetch transactions from the API
+        fetchTransactions()
     }
     
+    // Alamofire API Request
+    func fetchTransactions() {
+        let url = "http://speedotransfer-backend-production-7875.up.railway.app/api/v1/account/getAllTransactions"
+        
+        AF.request(url, method: .get).validate().responseDecodable(of: [TransferTransaction].self) { response in
+            switch response.result {
+            case .success(let transactions):
+                // Handle the transactions, e.g., display them in a table or process them further
+                self.handleTransactions(transactions)
+            case .failure(let error):
+                print("Error fetching transactions: \(error)")
+                // Optionally show an alert or error message in the UI
+            }
+        }
+    }
+
+    // Process or display the fetched transactions
+    func handleTransactions(_ transactions: [TransferTransaction]) {
+        // You can update the UI, reload a table view, or process the data as needed
+        for transaction in transactions {
+            print("Transaction: \(transaction.receiverName) - \(transaction.amount)")
+        }
+    }
+    
+    // UI Creation Functions
+
     func createStepperView() -> UIView {
         let container = UIStackView()
         container.axis = .horizontal
@@ -180,12 +220,12 @@ class TransferViewController: UIViewController {
         titleLabel.font = UIFont(name: "Inter-Medium", size: 16)
         titleLabel.textColor = UIColor(red: 0.24, green: 0.23, blue: 0.22, alpha: 1.0)
         
-        let nameField = createTextField(placeholder: "Recipient Name")
-        let accountField = createTextField(placeholder: "Recipient Account Number")
+        let receiverNameField = createTextField(placeholder: "Receiver Name")
+        let receiverAccountField = createTextField(placeholder: "Receiver Account")
         
-        let stack = UIStackView(arrangedSubviews: [titleLabel, nameField, accountField])
+        let stack = UIStackView(arrangedSubviews: [titleLabel, receiverNameField, receiverAccountField])
         stack.axis = .vertical
-        stack.spacing = 16
+        stack.spacing = 12
         stack.translatesAutoresizingMaskIntoConstraints = false
         
         container.addSubview(stack)
@@ -200,39 +240,34 @@ class TransferViewController: UIViewController {
         return container
     }
     
-    func createTextField(placeholder: String) -> UIView {
+    func createTextField(placeholder: String) -> UITextField {
         let textField = UITextField()
         textField.placeholder = placeholder
-        textField.font = UIFont(name: "Inter-Regular", size: 14)
+        textField.font = UIFont(name: "Inter-Regular", size: 16)
         textField.textColor = UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
-        textField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
         textField.layer.cornerRadius = 6
         textField.layer.borderWidth = 0.75
         textField.layer.borderColor = UIColor.lightGray.cgColor
-        
-        let container = UIView()
-        container.addSubview(textField)
+        textField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
+        textField.textAlignment = .center
         textField.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
-            textField.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            textField.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            textField.topAnchor.constraint(equalTo: container.topAnchor),
-            textField.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             textField.heightAnchor.constraint(equalToConstant: 40),
         ])
         
-        container.translatesAutoresizingMaskIntoConstraints = false
-        return container
+        return textField
     }
     
     func createFavoritesButton() -> UIButton {
         let button = UIButton(type: .system)
-        button.setTitle("Favorites", for: .normal)
+        button.setTitle("Add to Favorites", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Inter-Medium", size: 14)
         button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
-        button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(favoritesButtonTapped), for: .touchUpInside)
+        button.layer.cornerRadius = 6
         button.translatesAutoresizingMaskIntoConstraints = false
+        
         return button
     }
     
@@ -240,32 +275,11 @@ class TransferViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Continue", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Inter-SemiBold", size: 16)
         button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
         button.layer.cornerRadius = 8
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
-
-        view.addSubview(button)
+        
         return button
     }
-    @objc private func didTapContinueButton() {
-           let confirmationVC = ConfirmationViewController()
-           navigationController?.pushViewController(confirmationVC, animated: true)
-        
-       }
-    
-    @objc func favoritesButtonTapped() {
-        let favoritesListView = FavoritesListViewController()
-        favoritesListView.modalPresentationStyle = .popover
-        favoritesListView.preferredContentSize = CGSize(width: 300, height: 300) // Set the desired size here
-        
-        if let popover = favoritesListView.popoverPresentationController {
-            popover.sourceView = self.view
-            popover.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            popover.permittedArrowDirections = [] // No arrow direction for center placement
-        }
-        
-        present(favoritesListView, animated: true, completion: nil)
-    }
-
 }
