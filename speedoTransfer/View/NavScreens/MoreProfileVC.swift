@@ -105,7 +105,7 @@ extension MoreProfileVC: profileCellDelegate {
             // Check for "Profile" task and navigate to MoreProfileVC
             if selectedTask == "Setting" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
-                               if let profileVC = storyboard.instantiateViewController(withIdentifier: "settings") as? settings {
+                               if let profileVC = storyboard.instantiateViewController(withIdentifier: "Settings") as? Settings {
                                    navigationController?.pushViewController(profileVC, animated: true)
                                }
                                
