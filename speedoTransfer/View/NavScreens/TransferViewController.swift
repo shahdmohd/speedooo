@@ -22,6 +22,10 @@ class TransferViewController: UIViewController {
         super.viewDidLoad()
         profileVc.secondBackgroundColor(to: self.view)
 
+        setupUI()
+    }
+    
+    private func setupUI() {
         // Stepper Circles and Lines
         let stepperView = createStepperView()
         view.addSubview(stepperView)
@@ -75,9 +79,6 @@ class TransferViewController: UIViewController {
             continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             continueButton.heightAnchor.constraint(equalToConstant: 50),
         ])
-        
-        // Fetch Transactions (optional)
-        fetchTransactions()
     }
     
     func createStepperView() -> UIView {
@@ -267,32 +268,51 @@ class TransferViewController: UIViewController {
             return
         }
         
+        // Optionally, fetch transactions or handle the input data
+        fetchTransactions(amount: amountText, receiverName: receiverName, receiverAccount: "exampleAccountNumber")
+        
         let confirmationVC = ConfirmationViewController()
         confirmationVC.amount = amount
         confirmationVC.receiverName = receiverName
         navigationController?.pushViewController(confirmationVC, animated: true)
     }
     
-    func fetchTransactions() {
+    func fetchTransactions(amount: String, receiverName: String, receiverAccount: String) {
+        guard let amountInt = Int(amount) else {
+                print("Invalid amount format")
+                return
+            }
+        let token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLQGdtYWlsLmNvbSIsImlhdCI6MTcyNjEzNDc5NSwiZXhwIjoxNzI2MTUyNzk1fQ.R_IRGyR2TQlOMX7VTDxRB9f9sidQ8LIq717IzmDjK80"
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token)"
+        ]
         let url = "http://speedotransfer-backend-production-7875.up.railway.app/api/transactions/transfer"
         
-        AF.request(url, method: .get).validate().responseDecodable(of: [TransferTransaction].self) { response in
-            switch response.result {
-            case .success(let transactions):
-                // Handle the transactions, e.g., display them in a table or process them further
-                self.handleTransactions(transactions)
-            case .failure(let error):
-                print("Error fetching transactions: \(error)")
-                // Optionally show an alert or error message in the UI
+        let parameters: [String: Any] = [
+            "id":"1234",
+            "amount": 4555,
+            "receiverName": "yousef",
+            "receiverAccount": "yousef@gmail.com",
+            "status": "SENT"
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .validate()
+            .responseDecodable(of: TransferTransaction.self) { response in
+                switch response.result {
+                case .success(let transactions):
+                    self.handleTransactions(transactions)
+                case .failure(let error):
+                    print("Error fetching transactions: \(error)")
+                    // Optionally show an alert or error message in the UI
+                }
             }
-        }
     }
     
-    func handleTransactions(_ transactions: [TransferTransaction]) {
-        // You can update the UI, reload a table view, or process the data as needed
-        for transaction in transactions {
+    func handleTransactions(_ transaction: TransferTransaction) {
+        // Update the UI, reload a table view, or process the data as needed
             print("Transaction: \(transaction.receiverName) - \(transaction.amount)")
-        }
+        
     }
 }
 

@@ -3,16 +3,24 @@ import Alamofire
 import Foundation
 
 struct Transaction: Codable {
-    let id: String
-    let senderAccount: String
-    let receiverName: String
-    let status: String
-    let amount: Double
+    let id: Int
+        let senderAccount: String
+        let receiverName: String
+        let receiverAccount: String
+        let status: String
+        let amount: Double
 }
-func fetchTransactions(completion: @escaping ([Transaction]?) -> Void) {
+func fetchTransactions( completion: @escaping ([Transaction]?) -> Void) {
+    let token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLQGdtYWlsLmNvbSIsImlhdCI6MTcyNjEzNDc5NSwiZXhwIjoxNzI2MTUyNzk1fQ.R_IRGyR2TQlOMX7VTDxRB9f9sidQ8LIq717IzmDjK80"
+
     let url = "http://speedotransfer-backend-production-7875.up.railway.app/api/v1/account/getAllTransactions"
     
-    AF.request(url)
+    // Set up headers with the token
+    let headers: HTTPHeaders = [
+        "Authorization": "Bearer \(token)"
+    ]
+    
+    AF.request(url,method: .get, headers: headers)
         .validate()
         .responseDecodable(of: [Transaction].self) { response in
             switch response.result {
@@ -24,7 +32,6 @@ func fetchTransactions(completion: @escaping ([Transaction]?) -> Void) {
             }
         }
 }
-
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     static func create() -> HomeViewController {
@@ -47,7 +54,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         profileVc.secondBackgroundColor(to: self.view)
-        fetchTransactions { [weak self] transactions in
+
+        fetchTransactions() { [weak self] transactions in
             DispatchQueue.main.async {
                 self?.transactions = transactions ?? []
             }}
