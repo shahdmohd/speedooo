@@ -1,49 +1,131 @@
+
+//  ViewController.swift
+//  try
 //
-//  MoreProfileVC.swift
-//  speedoTransfer
+//  Created by 1234 on 04/09/2024.
 //
-//  Created by 1234 on 08/09/2024.
-//
+
 
 import UIKit
-
 class MoreProfileVC: UIViewController {
+    
+
     static func create() -> MoreProfileVC {
         return MoreProfileVC()
     }
-
-
+    
+    @IBOutlet weak var proficon: UIImageView!
+    @IBOutlet weak var profTableView: UITableView!
+    @IBOutlet weak var nameLabelprof: UILabel!
+    
+    
+    let icons : [String] = ["Group", "favorite", "user","help"]
+    let tasks : [String] = ["Transfer From Website", "Favourites", "Profile","Help"]
+    let texts : [String] = ["Transfer From Website", "Favourites", "Profile","Help"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
         secondBackgroundColor(to: self.view)
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
-                navigationItem.leftBarButtonItem = backButton
-            }
-            
-            @objc func backButtonTapped() {
-                // Pop back to MoreVC
-                navigationController?.popViewController(animated: true)
-            }
+        profTableView.register(UINib(nibName: "moreProfileCell", bundle: nil), forCellReuseIdentifier: "moreProfileCell")
 
+        UINavigationBarAppearance().titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25, weight: .regular)]
+        // Register custom cell
+        profTableView.register(UINib(nibName: "MoreTVCell", bundle: nil), forCellReuseIdentifier: "MoreTVCell")
+        
+        profTableView.delegate = self
+        profTableView.dataSource = self
+     
+      
+        
+        
+        // Set the background color of the table view to clear
+        profTableView.backgroundColor = UIColor.clear
+              
+        // Reload the table view to reflect the data
+        profTableView.reloadData()
+        
+   
     
-    
-    
-    // MARK: - BackGround Color
-    public func secondBackgroundColor(to view: UIView) {
-        let gradientColor = UIColor.bankMasrGradient(frame: view.bounds)
-        view.layer.addSublayer(gradientColor)
-        view.layer.insertSublayer(gradientColor, at: 0)
+
+
     }
 
-    // MARK: - BackGround Color
-    public func firstbackgroundColor(to view: UIView) {
-        let gradientColor = UIColor.firstBMGrad(frame: view.bounds)
-        view.layer.addSublayer(gradientColor)
-        view.layer.insertSublayer(gradientColor, at: 0)
-    }
+
+
+// MARK: - BackGround Color
+public func secondBackgroundColor(to view: UIView) {
+let gradientColor = UIColor.bankMasrGradient(frame: view.bounds)
+view.layer.addSublayer(gradientColor)
+view.layer.insertSublayer(gradientColor, at: 0)
+}
+
+// MARK: - BackGround Color
+public func firstbackgroundColor(to view: UIView) {
+let gradientColor = UIColor.firstBMGrad(frame: view.bounds)
+view.layer.addSublayer(gradientColor)
+view.layer.insertSublayer(gradientColor, at: 0)
+}
 
 }
+
+
+extension MoreProfileVC: UITableViewDelegate, UITableViewDataSource {
+    // This function is related to delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+      
+    }
+    
+    // Both these functions are for Data Source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+    }
+    
+   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "moreProfileCell", for: indexPath) as! moreProfileCell
+        
+        // Configure the cell with the corresponding text from the array
+        let text = tasks[indexPath.row]
+        let icon = icons[indexPath.row]
+        let subtext = texts[indexPath.row]
+        cell.configureCell(labels: Labels(title: text, image: icon, subLabel: subtext))
+        cell.delegate = self
+        return cell
+    }
+}
+extension MoreProfileVC: profileCellDelegate {
+    func didTapcell(_ cell: moreProfileCell) {
+        // Find the index path of the selected cell
+        if let indexPath = profTableView.indexPath(for: cell) {
+            let selectedTask = tasks[indexPath.row]
+            
+            // Check for "Profile" task and navigate to MoreProfileVC
+            if selectedTask == "Personal information" {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+                               if let profileVC = storyboard.instantiateViewController(withIdentifier: "TransactionsVC") as? TransactionsVC {
+                                   navigationController?.pushViewController(profileVC, animated: true)
+                               }
+                               
+                           // Check for "Favourites" task and navigate to FavouriteVC
+               } else if selectedTask == "Favourites" {
+                   // Instantiate FavouriteVC using storyboard
+                   let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+                   if let favouriteVC = storyboard.instantiateViewController(withIdentifier: "FavouriteVC") as? FavouriteVC {
+                       navigationController?.pushViewController(favouriteVC, animated: true)
+                   }
+        }
+    }
+}
+}
+
+
+
+
+
+
 // UIColor extension for hex colors
 extension UIColor {
     // Hex initializer
