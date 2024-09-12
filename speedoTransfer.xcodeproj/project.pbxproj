@@ -23,9 +23,9 @@
 		6ADCC26C2C91E403007F05F0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC26B2C91E403007F05F0 /* PaymentViewController.swift */; };
 		6D68317B0D7233994B03CC2F /* Pods_speedoTransfer_speedoTransferUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237511779FDC25552F79D1BD /* Pods_speedoTransfer_speedoTransferUITests.framework */; };
 		6F0CC080F9AC1DE20881F882 /* Pods_speedoTransferTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289580A4BFC1D3B7D5FDD3BB /* Pods_speedoTransferTests.framework */; };
-		7C2053DB2C92D8C300189BE6 /* moreProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2053D92C92D8C300189BE6 /* moreProfileCell.xib */; };
-		7C2053DC2C92D8C400189BE6 /* moreProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2053DA2C92D8C300189BE6 /* moreProfileCell.swift */; };
 		7C2053DE2C92D8EB00189BE6 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2053DD2C92D8EB00189BE6 /* Labels.swift */; };
+		7C2053E12C92DBC000189BE6 /* moreProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2053DF2C92DBC000189BE6 /* moreProfileCell.swift */; };
+		7C2053E22C92DBC000189BE6 /* moreProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2053E02C92DBC000189BE6 /* moreProfileCell.xib */; };
 		7C40FB1D2C8DCF5800A55D81 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */; };
 		7C40FB202C8DD0B600A55D81 /* MoreTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */; };
 		7C40FB212C8DD0B600A55D81 /* MoreTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */; };
@@ -85,9 +85,9 @@
 		6ADCC2672C91B67B007F05F0 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		6ADCC26B2C91E403007F05F0 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		6FE020021F1691D916586A4B /* Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig"; path = "Target Support Files/Pods-speedoTransfer-speedoTransferUITests/Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7C2053D92C92D8C300189BE6 /* moreProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = moreProfileCell.xib; path = ../../../../../../Desktop/try/try/View/cells/moreProfileCell.xib; sourceTree = "<group>"; };
-		7C2053DA2C92D8C300189BE6 /* moreProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = moreProfileCell.swift; path = ../../../../../../Desktop/try/try/View/cells/moreProfileCell.swift; sourceTree = "<group>"; };
 		7C2053DD2C92D8EB00189BE6 /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Labels.swift; path = ../../../../../Desktop/try/try/Model/Labels.swift; sourceTree = "<group>"; };
+		7C2053DF2C92DBC000189BE6 /* moreProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreProfileCell.swift; sourceTree = "<group>"; };
+		7C2053E02C92DBC000189BE6 /* moreProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = moreProfileCell.xib; sourceTree = "<group>"; };
 		7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
 		7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTVCell.swift; sourceTree = "<group>"; };
 		7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTVCell.xib; sourceTree = "<group>"; };
@@ -278,13 +278,13 @@
 		7CE881D82C924EE6004FBD19 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				7C2053DA2C92D8C300189BE6 /* moreProfileCell.swift */,
-				7C2053D92C92D8C300189BE6 /* moreProfileCell.xib */,
 				6A0B331F2C908E9000CFADFC /* TransactionCell.swift */,
 				7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */,
 				7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */,
 				7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */,
 				7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */,
+				7C2053DF2C92DBC000189BE6 /* moreProfileCell.swift */,
+				7C2053E02C92DBC000189BE6 /* moreProfileCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -434,7 +434,7 @@
 			files = (
 				7C40FB212C8DD0B600A55D81 /* MoreTVCell.xib in Resources */,
 				6A0B331C2C908AEE00CFADFC /* Main.storyboard in Resources */,
-				7C2053DB2C92D8C300189BE6 /* moreProfileCell.xib in Resources */,
+				7C2053E22C92DBC000189BE6 /* moreProfileCell.xib in Resources */,
 				7CB462DC2C812CD600C6F795 /* LaunchScreen.storyboard in Resources */,
 				7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */,
 				7C9415062C91B4DB00FED40B /* favListCellTableViewCell.xib in Resources */,
@@ -580,7 +580,6 @@
 				7C40FB202C8DD0B600A55D81 /* MoreTVCell.swift in Sources */,
 				6ADCC2662C91ACBE007F05F0 /* FavoritesListView.swift in Sources */,
 				6A0B33262C908FA300CFADFC /* SignInViewController.swift in Sources */,
-				7C2053DC2C92D8C400189BE6 /* moreProfileCell.swift in Sources */,
 				7C6EA3C02C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift in Sources */,
 				6ADCC26C2C91E403007F05F0 /* PaymentViewController.swift in Sources */,
 				7CE881D02C922D1C004FBD19 /* InternetIssueVC.swift in Sources */,
@@ -590,6 +589,7 @@
 				7CE881CE2C922CBB004FBD19 /* ErrorVC.swift in Sources */,
 				7C40FB232C8E223000A55D81 /* MoreProfileVC.swift in Sources */,
 				7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */,
+				7C2053E12C92DBC000189BE6 /* moreProfileCell.swift in Sources */,
 				7C40FB252C8E242B00A55D81 /* Media.swift in Sources */,
 				7C2053DE2C92D8EB00189BE6 /* Labels.swift in Sources */,
 				7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */,
