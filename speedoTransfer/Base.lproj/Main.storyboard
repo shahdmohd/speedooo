@@ -40,21 +40,6 @@
             </objects>
             <point key="canvasLocation" x="6555.072463768116" y="83.705357142857139"/>
         </scene>
-        <!--More ProfileVC-->
-        <scene sceneID="bsF-Ve-8MB">
-            <objects>
-                <viewController storyboardIdentifier="MoreProfileVC" id="G7F-FJ-byN" customClass="MoreProfileVC" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cmC-f6-5gx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="avK-7U-siL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhd-kk-Mlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7212" y="84"/>
-        </scene>
         <!--FavouriteVC-->
         <scene sceneID="al5-nA-Y3L">
             <objects>
@@ -390,6 +375,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAP-Hy-Ane" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5644.9275362318849" y="83.705357142857139"/>
+        </scene>
+        <!--More ProfileVC-->
+        <scene sceneID="rSq-Wz-jsX">
+            <objects>
+                <viewController storyboardIdentifier="MoreProfileVC" id="M3Y-cY-zb9" customClass="MoreProfileVC" customModule="try" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NAr-5W-w6t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l9S-C0-KNC">
+                                <rect key="frame" x="20" y="185" width="374" height="653"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Asmaa Dosuky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-kd-gF1">
+                                <rect key="frame" x="105" y="111" width="185" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ri-VF-yDm">
+                                <rect key="frame" x="30" y="111" width="53" height="53"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dkb-LM-9R6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9ri-VF-yDm" firstAttribute="width" secondItem="NAr-5W-w6t" secondAttribute="width" multiplier="0.128019" id="J1X-ay-D1T"/>
+                            <constraint firstItem="9ri-VF-yDm" firstAttribute="top" secondItem="Dkb-LM-9R6" secondAttribute="top" constant="67" id="jOX-xV-RWl"/>
+                            <constraint firstItem="Dkb-LM-9R6" firstAttribute="bottom" secondItem="9ri-VF-yDm" secondAttribute="bottom" constant="698" id="rlt-JD-QCW"/>
+                            <constraint firstItem="9ri-VF-yDm" firstAttribute="height" secondItem="NAr-5W-w6t" secondAttribute="height" multiplier="0.0591518" id="ykY-jq-cCU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabelprof" destination="8bi-kd-gF1" id="TnH-vJ-7ee"/>
+                        <outlet property="profTableView" destination="l9S-C0-KNC" id="rfk-0x-h9v"/>
+                        <outlet property="proficon" destination="9ri-VF-yDm" id="XKA-iL-crN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKM-lu-rqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7211.594202898551" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
