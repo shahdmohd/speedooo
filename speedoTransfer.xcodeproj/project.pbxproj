@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8EA65701D48FD740FF031E /* Pods_speedoTransfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BD4FA6521BF3855CEA82A8 /* Pods_speedoTransfer.framework */; };
 		6A0B331B2C9089C500CFADFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A540F752C908263003C14B8 /* SceneDelegate.swift */; };
 		6A0B331C2C908AEE00CFADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462D52C812CD400C6F795 /* Main.storyboard */; };
 		6A0B33202C908E9000CFADFC /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B331F2C908E9000CFADFC /* TransactionCell.swift */; };
@@ -15,23 +16,37 @@
 		6A0B33262C908FA300CFADFC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B33252C908FA300CFADFC /* SignInViewController.swift */; };
 		6A0B33282C908FA500CFADFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B33272C908FA500CFADFC /* HomeViewController.swift */; };
 		6A0B332A2C908FA800CFADFC /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B33292C908FA800CFADFC /* FirstSignUpViewController.swift */; };
+		6A4229AE2C92AC3300AD324E /* CountrySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4229AD2C92AC3300AD324E /* CountrySelectionViewController.swift */; };
+		6ADCC2642C91A8E4007F05F0 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC2632C91A8E4007F05F0 /* CustomPresentationController.swift */; };
+		6ADCC2662C91ACBE007F05F0 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC2652C91ACBE007F05F0 /* FavoritesListView.swift */; };
+		6ADCC2682C91B67B007F05F0 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC2672C91B67B007F05F0 /* ConfirmationViewController.swift */; };
+		6ADCC26C2C91E403007F05F0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC26B2C91E403007F05F0 /* PaymentViewController.swift */; };
+		6D68317B0D7233994B03CC2F /* Pods_speedoTransfer_speedoTransferUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237511779FDC25552F79D1BD /* Pods_speedoTransfer_speedoTransferUITests.framework */; };
+		6F0CC080F9AC1DE20881F882 /* Pods_speedoTransferTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289580A4BFC1D3B7D5FDD3BB /* Pods_speedoTransferTests.framework */; };
+		7C2053DB2C92D8C300189BE6 /* moreProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2053D92C92D8C300189BE6 /* moreProfileCell.xib */; };
+		7C2053DC2C92D8C400189BE6 /* moreProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2053DA2C92D8C300189BE6 /* moreProfileCell.swift */; };
+		7C2053DE2C92D8EB00189BE6 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2053DD2C92D8EB00189BE6 /* Labels.swift */; };
 		7C40FB1D2C8DCF5800A55D81 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */; };
 		7C40FB202C8DD0B600A55D81 /* MoreTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */; };
 		7C40FB212C8DD0B600A55D81 /* MoreTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */; };
 		7C40FB232C8E223000A55D81 /* MoreProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB222C8E223000A55D81 /* MoreProfileVC.swift */; };
 		7C40FB252C8E242B00A55D81 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB242C8E242B00A55D81 /* Media.swift */; };
-		7C40FB292C8E27F600A55D81 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB282C8E27F600A55D81 /* HomeVC.swift */; };
-		7C40FB2B2C8E283700A55D81 /* TransferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB2A2C8E283700A55D81 /* TransferVC.swift */; };
 		7C40FB2D2C8E287800A55D81 /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */; };
 		7C40FB302C8E2B5600A55D81 /* My_cardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40FB2F2C8E2B5600A55D81 /* My_cardsVC.swift */; };
-		7C6EA3BD2C907A33001A3611 /* VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3B82C907A33001A3611 /* VC3.swift */; };
-		7C6EA3BE2C907A33001A3611 /* VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3B92C907A33001A3611 /* VC1.swift */; };
-		7C6EA3BF2C907A33001A3611 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3BA2C907A33001A3611 /* VC2.swift */; };
+		7C4BFFFB2C91877E00AA2C53 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4BFFFA2C91877E00AA2C53 /* FavouriteVC.swift */; };
+		7C5A45F62C91E072005FCDC9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A45F52C91E072005FCDC9 /* User.swift */; };
 		7C6EA3C02C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */; };
-		7C6EA3C12C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3BC2C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift */; };
+		7C6EA3DC2C90A0E9001A3611 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6EA3DB2C90A0E9001A3611 /* TabBarVC.swift */; };
+		7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */; };
+		7C9415052C91B4DB00FED40B /* favListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */; };
+		7C9415062C91B4DB00FED40B /* favListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */; };
+		7CA1B5602C919983001FC9EB /* FavouritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */; };
 		7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB462CF2C812CD400C6F795 /* AppDelegate.swift */; };
 		7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462D82C812CD600C6F795 /* Assets.xcassets */; };
 		7CB462DC2C812CD600C6F795 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB462DA2C812CD600C6F795 /* LaunchScreen.storyboard */; };
+		7CE881CE2C922CBB004FBD19 /* ErrorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE881CD2C922CBB004FBD19 /* ErrorVC.swift */; };
+		7CE881D02C922D1C004FBD19 /* InternetIssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE881CF2C922D1C004FBD19 /* InternetIssueVC.swift */; };
+		7CE881D22C923B20004FBD19 /* editPopUpMenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE881D12C923B20004FBD19 /* editPopUpMenueVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,35 +67,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FBB9BE78116CB2344D78D7F /* Pods-speedoTransferTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransferTests.release.xcconfig"; path = "Target Support Files/Pods-speedoTransferTests/Pods-speedoTransferTests.release.xcconfig"; sourceTree = "<group>"; };
+		22DEE18B507D82DFD7471FE8 /* Pods-speedoTransfer-speedoTransferUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransfer-speedoTransferUITests.release.xcconfig"; path = "Target Support Files/Pods-speedoTransfer-speedoTransferUITests/Pods-speedoTransfer-speedoTransferUITests.release.xcconfig"; sourceTree = "<group>"; };
+		237511779FDC25552F79D1BD /* Pods_speedoTransfer_speedoTransferUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedoTransfer_speedoTransferUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		289580A4BFC1D3B7D5FDD3BB /* Pods_speedoTransferTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedoTransferTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55BD4FA6521BF3855CEA82A8 /* Pods_speedoTransfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedoTransfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0B331F2C908E9000CFADFC /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		6A0B33212C908F8100CFADFC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6A0B33232C908FA000CFADFC /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		6A0B33252C908FA300CFADFC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6A0B33272C908FA500CFADFC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6A0B33292C908FA800CFADFC /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
+		6A4229AD2C92AC3300AD324E /* CountrySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionViewController.swift; sourceTree = "<group>"; };
 		6A540F752C908263003C14B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6ADCC2632C91A8E4007F05F0 /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		6ADCC2652C91ACBE007F05F0 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
+		6ADCC2672C91B67B007F05F0 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		6ADCC26B2C91E403007F05F0 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		6FE020021F1691D916586A4B /* Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig"; path = "Target Support Files/Pods-speedoTransfer-speedoTransferUITests/Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C2053D92C92D8C300189BE6 /* moreProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = moreProfileCell.xib; path = ../../../../../../Desktop/try/try/View/cells/moreProfileCell.xib; sourceTree = "<group>"; };
+		7C2053DA2C92D8C300189BE6 /* moreProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = moreProfileCell.swift; path = ../../../../../../Desktop/try/try/View/cells/moreProfileCell.swift; sourceTree = "<group>"; };
+		7C2053DD2C92D8EB00189BE6 /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Labels.swift; path = ../../../../../Desktop/try/try/Model/Labels.swift; sourceTree = "<group>"; };
 		7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
 		7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTVCell.swift; sourceTree = "<group>"; };
 		7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTVCell.xib; sourceTree = "<group>"; };
 		7C40FB222C8E223000A55D81 /* MoreProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreProfileVC.swift; sourceTree = "<group>"; };
 		7C40FB242C8E242B00A55D81 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		7C40FB282C8E27F600A55D81 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		7C40FB2A2C8E283700A55D81 /* TransferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferVC.swift; sourceTree = "<group>"; };
 		7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
 		7C40FB2F2C8E2B5600A55D81 /* My_cardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_cardsVC.swift; sourceTree = "<group>"; };
-		7C6EA3B82C907A33001A3611 /* VC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC3.swift; sourceTree = "<group>"; };
-		7C6EA3B92C907A33001A3611 /* VC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
-		7C6EA3BA2C907A33001A3611 /* VC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
+		7C4BFFFA2C91877E00AA2C53 /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		7C5A45F52C91E072005FCDC9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DemoViewController.swift 15-50-55-050.swift"; sourceTree = "<group>"; };
-		7C6EA3BC2C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "onBoardingVC.swift 15-50-55-051.swift"; sourceTree = "<group>"; };
+		7C6EA3DB2C90A0E9001A3611 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favListCellTableViewCell.swift; sourceTree = "<group>"; };
+		7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = favListCellTableViewCell.xib; sourceTree = "<group>"; };
+		7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesListViewController.swift; sourceTree = "<group>"; };
 		7CB462CC2C812CD400C6F795 /* speedoTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speedoTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB462CF2C812CD400C6F795 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CB462D62C812CD400C6F795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7CB462D82C812CD600C6F795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CB462D82C812CD600C6F795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		7CB462DB2C812CD600C6F795 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CB462DD2C812CD600C6F795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CB462E22C812CD600C6F795 /* speedoTransferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speedoTransferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB462EC2C812CD600C6F795 /* speedoTransferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speedoTransferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE881CD2C922CBB004FBD19 /* ErrorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorVC.swift; sourceTree = "<group>"; };
+		7CE881CF2C922D1C004FBD19 /* InternetIssueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIssueVC.swift; sourceTree = "<group>"; };
+		7CE881D12C923B20004FBD19 /* editPopUpMenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editPopUpMenueVC.swift; sourceTree = "<group>"; };
+		7CF9CE8027651FA3DBDFD938 /* Pods-speedoTransfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransfer.release.xcconfig"; path = "Target Support Files/Pods-speedoTransfer/Pods-speedoTransfer.release.xcconfig"; sourceTree = "<group>"; };
+		86F3268F435502358BD406FE /* Pods-speedoTransferTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransferTests.debug.xcconfig"; path = "Target Support Files/Pods-speedoTransferTests/Pods-speedoTransferTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7C01CAC01A21E0750F37A31 /* Pods-speedoTransfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransfer.debug.xcconfig"; path = "Target Support Files/Pods-speedoTransfer/Pods-speedoTransfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8EA65701D48FD740FF031E /* Pods_speedoTransfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F0CC080F9AC1DE20881F882 /* Pods_speedoTransferTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,15 +140,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D68317B0D7233994B03CC2F /* Pods_speedoTransfer_speedoTransferUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A7514F1A79D7A7E76C84E2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7C01CAC01A21E0750F37A31 /* Pods-speedoTransfer.debug.xcconfig */,
+				7CF9CE8027651FA3DBDFD938 /* Pods-speedoTransfer.release.xcconfig */,
+				6FE020021F1691D916586A4B /* Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig */,
+				22DEE18B507D82DFD7471FE8 /* Pods-speedoTransfer-speedoTransferUITests.release.xcconfig */,
+				86F3268F435502358BD406FE /* Pods-speedoTransferTests.debug.xcconfig */,
+				1FBB9BE78116CB2344D78D7F /* Pods-speedoTransferTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6887212CA62040708E7B3519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55BD4FA6521BF3855CEA82A8 /* Pods_speedoTransfer.framework */,
+				237511779FDC25552F79D1BD /* Pods_speedoTransfer_speedoTransferUITests.framework */,
+				289580A4BFC1D3B7D5FDD3BB /* Pods_speedoTransferTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6A540F722C907BE4003C14B8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7CB462DA2C812CD600C6F795 /* LaunchScreen.storyboard */,
+				7CB462D82C812CD600C6F795 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -118,26 +182,23 @@
 		7C40FB2E2C8E2AC700A55D81 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */,
-				7C40FB222C8E223000A55D81 /* MoreProfileVC.swift */,
-				7C40FB282C8E27F600A55D81 /* HomeVC.swift */,
-				7C40FB2A2C8E283700A55D81 /* TransferVC.swift */,
-				7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */,
-				7C40FB2F2C8E2B5600A55D81 /* My_cardsVC.swift */,
+				7CE881DA2C924FDD004FBD19 /* erros */,
+				7CE881D92C924FBD004FBD19 /* Popups */,
+				7CE881D52C924DC8004FBD19 /* Authentication */,
+				7CE881D82C924EE6004FBD19 /* cells */,
+				7CE881D62C924DFA004FBD19 /* NavScreens */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		7C6EA3B72C907A33001A3611 /* untitled folder */ = {
+		7C6EA3B72C907A33001A3611 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7C6EA3B82C907A33001A3611 /* VC3.swift */,
-				7C6EA3B92C907A33001A3611 /* VC1.swift */,
-				7C6EA3BA2C907A33001A3611 /* VC2.swift */,
+				7C6EA3DB2C90A0E9001A3611 /* TabBarVC.swift */,
 				7C6EA3BB2C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift */,
-				7C6EA3BC2C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift */,
+				7C77D3742C91045B006DDDC4 /* OnboardingViewController.swift */,
 			);
-			path = "untitled folder";
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		7CB462C32C812CD400C6F795 = {
@@ -145,6 +206,8 @@
 			children = (
 				7CB462CE2C812CD400C6F795 /* speedoTransfer */,
 				7CB462CD2C812CD400C6F795 /* Products */,
+				3A7514F1A79D7A7E76C84E2C /* Pods */,
+				6887212CA62040708E7B3519 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,26 +224,103 @@
 		7CB462CE2C812CD400C6F795 /* speedoTransfer */ = {
 			isa = PBXGroup;
 			children = (
-				7C6EA3B72C907A33001A3611 /* untitled folder */,
+				7CE881DC2C925028004FBD19 /* AppDelegate */,
+				7CE881DB2C92501B004FBD19 /* AppManager */,
+				7CE881D72C924E80004FBD19 /* Model */,
+				7C6EA3B72C907A33001A3611 /* Controller */,
 				7C40FB2E2C8E2AC700A55D81 /* View */,
 				6A540F722C907BE4003C14B8 /* Resources */,
 				7CB462D52C812CD400C6F795 /* Main.storyboard */,
-				7CB462D82C812CD600C6F795 /* Assets.xcassets */,
-				7CB462CF2C812CD400C6F795 /* AppDelegate.swift */,
-				6A0B33232C908FA000CFADFC /* TransferViewController.swift */,
-				6A0B33252C908FA300CFADFC /* SignInViewController.swift */,
-				6A0B33272C908FA500CFADFC /* HomeViewController.swift */,
-				6A0B33292C908FA800CFADFC /* FirstSignUpViewController.swift */,
-				6A0B33212C908F8100CFADFC /* SignUpViewController.swift */,
-				6A540F752C908263003C14B8 /* SceneDelegate.swift */,
-				6A0B331F2C908E9000CFADFC /* TransactionCell.swift */,
-				7CB462DA2C812CD600C6F795 /* LaunchScreen.storyboard */,
+				6ADCC2632C91A8E4007F05F0 /* CustomPresentationController.swift */,
+				6ADCC2652C91ACBE007F05F0 /* FavoritesListView.swift */,
 				7CB462DD2C812CD600C6F795 /* Info.plist */,
-				7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */,
-				7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */,
-				7C40FB242C8E242B00A55D81 /* Media.swift */,
 			);
 			path = speedoTransfer;
+			sourceTree = "<group>";
+		};
+		7CE881D52C924DC8004FBD19 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				6A0B33292C908FA800CFADFC /* FirstSignUpViewController.swift */,
+				6A0B33252C908FA300CFADFC /* SignInViewController.swift */,
+				6A0B33212C908F8100CFADFC /* SignUpViewController.swift */,
+				6A4229AD2C92AC3300AD324E /* CountrySelectionViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		7CE881D62C924DFA004FBD19 /* NavScreens */ = {
+			isa = PBXGroup;
+			children = (
+				7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */,
+				6ADCC2672C91B67B007F05F0 /* ConfirmationViewController.swift */,
+				7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */,
+				6ADCC26B2C91E403007F05F0 /* PaymentViewController.swift */,
+				7C40FB222C8E223000A55D81 /* MoreProfileVC.swift */,
+				6A0B33232C908FA000CFADFC /* TransferViewController.swift */,
+				7C40FB2F2C8E2B5600A55D81 /* My_cardsVC.swift */,
+				6A0B33272C908FA500CFADFC /* HomeViewController.swift */,
+				7C4BFFFA2C91877E00AA2C53 /* FavouriteVC.swift */,
+			);
+			path = NavScreens;
+			sourceTree = "<group>";
+		};
+		7CE881D72C924E80004FBD19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C5A45F52C91E072005FCDC9 /* User.swift */,
+				7C2053DD2C92D8EB00189BE6 /* Labels.swift */,
+				7C40FB242C8E242B00A55D81 /* Media.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CE881D82C924EE6004FBD19 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C2053DA2C92D8C300189BE6 /* moreProfileCell.swift */,
+				7C2053D92C92D8C300189BE6 /* moreProfileCell.xib */,
+				6A0B331F2C908E9000CFADFC /* TransactionCell.swift */,
+				7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */,
+				7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */,
+				7C40FB1E2C8DD0B600A55D81 /* MoreTVCell.swift */,
+				7C40FB1F2C8DD0B600A55D81 /* MoreTVCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		7CE881D92C924FBD004FBD19 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				7CA1B55F2C919983001FC9EB /* FavouritesListViewController.swift */,
+				7CE881D12C923B20004FBD19 /* editPopUpMenueVC.swift */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		7CE881DA2C924FDD004FBD19 /* erros */ = {
+			isa = PBXGroup;
+			children = (
+				7CE881CD2C922CBB004FBD19 /* ErrorVC.swift */,
+				7CE881CF2C922D1C004FBD19 /* InternetIssueVC.swift */,
+			);
+			path = erros;
+			sourceTree = "<group>";
+		};
+		7CE881DB2C92501B004FBD19 /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		7CE881DC2C925028004FBD19 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7CB462CF2C812CD400C6F795 /* AppDelegate.swift */,
+				6A540F752C908263003C14B8 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CB462F62C812CD600C6F795 /* Build configuration list for PBXNativeTarget "speedoTransfer" */;
 			buildPhases = (
+				525518627E63CBED24EDC21D /* [CP] Check Pods Manifest.lock */,
 				7CB462C82C812CD400C6F795 /* Sources */,
 				7CB462C92C812CD400C6F795 /* Frameworks */,
 				7CB462CA2C812CD400C6F795 /* Resources */,
+				F705AFEA35C5512B1D9CCF64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +349,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CB462F92C812CD600C6F795 /* Build configuration list for PBXNativeTarget "speedoTransferTests" */;
 			buildPhases = (
+				523AD036584B5FEA42E62B8C /* [CP] Check Pods Manifest.lock */,
 				7CB462DE2C812CD600C6F795 /* Sources */,
 				7CB462DF2C812CD600C6F795 /* Frameworks */,
 				7CB462E02C812CD600C6F795 /* Resources */,
@@ -225,9 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CB462FC2C812CD600C6F795 /* Build configuration list for PBXNativeTarget "speedoTransferUITests" */;
 			buildPhases = (
+				848D7E967E7A4ED28C350CDF /* [CP] Check Pods Manifest.lock */,
 				7CB462E82C812CD600C6F795 /* Sources */,
 				7CB462E92C812CD600C6F795 /* Frameworks */,
 				7CB462EA2C812CD600C6F795 /* Resources */,
+				5E22F4C83FD30EC216249BDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,8 +434,10 @@
 			files = (
 				7C40FB212C8DD0B600A55D81 /* MoreTVCell.xib in Resources */,
 				6A0B331C2C908AEE00CFADFC /* Main.storyboard in Resources */,
+				7C2053DB2C92D8C300189BE6 /* moreProfileCell.xib in Resources */,
 				7CB462DC2C812CD600C6F795 /* LaunchScreen.storyboard in Resources */,
 				7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */,
+				7C9415062C91B4DB00FED40B /* favListCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,33 +457,146 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		523AD036584B5FEA42E62B8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-speedoTransferTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		525518627E63CBED24EDC21D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-speedoTransfer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E22F4C83FD30EC216249BDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-speedoTransfer-speedoTransferUITests/Pods-speedoTransfer-speedoTransferUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-speedoTransfer-speedoTransferUITests/Pods-speedoTransfer-speedoTransferUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-speedoTransfer-speedoTransferUITests/Pods-speedoTransfer-speedoTransferUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		848D7E967E7A4ED28C350CDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-speedoTransfer-speedoTransferUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F705AFEA35C5512B1D9CCF64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-speedoTransfer/Pods-speedoTransfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-speedoTransfer/Pods-speedoTransfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-speedoTransfer/Pods-speedoTransfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CB462C82C812CD400C6F795 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6EA3BD2C907A33001A3611 /* VC3.swift in Sources */,
+				7C5A45F62C91E072005FCDC9 /* User.swift in Sources */,
 				6A0B332A2C908FA800CFADFC /* FirstSignUpViewController.swift in Sources */,
 				7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */,
+				6ADCC2642C91A8E4007F05F0 /* CustomPresentationController.swift in Sources */,
 				6A0B33202C908E9000CFADFC /* TransactionCell.swift in Sources */,
 				7C40FB302C8E2B5600A55D81 /* My_cardsVC.swift in Sources */,
-				7C40FB292C8E27F600A55D81 /* HomeVC.swift in Sources */,
 				6A0B33282C908FA500CFADFC /* HomeViewController.swift in Sources */,
+				6ADCC2682C91B67B007F05F0 /* ConfirmationViewController.swift in Sources */,
 				7C40FB1D2C8DCF5800A55D81 /* MoreVC.swift in Sources */,
+				7CA1B5602C919983001FC9EB /* FavouritesListViewController.swift in Sources */,
+				7C4BFFFB2C91877E00AA2C53 /* FavouriteVC.swift in Sources */,
 				6A0B33222C908F8100CFADFC /* SignUpViewController.swift in Sources */,
 				7C40FB202C8DD0B600A55D81 /* MoreTVCell.swift in Sources */,
+				6ADCC2662C91ACBE007F05F0 /* FavoritesListView.swift in Sources */,
 				6A0B33262C908FA300CFADFC /* SignInViewController.swift in Sources */,
+				7C2053DC2C92D8C400189BE6 /* moreProfileCell.swift in Sources */,
 				7C6EA3C02C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift in Sources */,
+				6ADCC26C2C91E403007F05F0 /* PaymentViewController.swift in Sources */,
+				7CE881D02C922D1C004FBD19 /* InternetIssueVC.swift in Sources */,
+				7CE881D22C923B20004FBD19 /* editPopUpMenueVC.swift in Sources */,
 				6A0B331B2C9089C500CFADFC /* SceneDelegate.swift in Sources */,
 				6A0B33242C908FA000CFADFC /* TransferViewController.swift in Sources */,
+				7CE881CE2C922CBB004FBD19 /* ErrorVC.swift in Sources */,
 				7C40FB232C8E223000A55D81 /* MoreProfileVC.swift in Sources */,
-				7C40FB2B2C8E283700A55D81 /* TransferVC.swift in Sources */,
-				7C6EA3C12C907A33001A3611 /* onBoardingVC.swift 15-50-55-051.swift in Sources */,
-				7C6EA3BE2C907A33001A3611 /* VC1.swift in Sources */,
+				7C77D3752C91045B006DDDC4 /* OnboardingViewController.swift in Sources */,
 				7C40FB252C8E242B00A55D81 /* Media.swift in Sources */,
+				7C2053DE2C92D8EB00189BE6 /* Labels.swift in Sources */,
 				7CB462D02C812CD400C6F795 /* AppDelegate.swift in Sources */,
+				6A4229AE2C92AC3300AD324E /* CountrySelectionViewController.swift in Sources */,
+				7C9415052C91B4DB00FED40B /* favListCellTableViewCell.swift in Sources */,
+				7C6EA3DC2C90A0E9001A3611 /* TabBarVC.swift in Sources */,
 				7C40FB2D2C8E287800A55D81 /* TransactionsVC.swift in Sources */,
-				7C6EA3BF2C907A33001A3611 /* VC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +685,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -486,7 +746,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -507,6 +767,7 @@
 		};
 		7CB462F72C812CD600C6F795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C01CAC01A21E0750F37A31 /* Pods-speedoTransfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -534,6 +795,7 @@
 		};
 		7CB462F82C812CD600C6F795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CF9CE8027651FA3DBDFD938 /* Pods-speedoTransfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -561,6 +823,7 @@
 		};
 		7CB462FA2C812CD600C6F795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F3268F435502358BD406FE /* Pods-speedoTransferTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -580,6 +843,7 @@
 		};
 		7CB462FB2C812CD600C6F795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBB9BE78116CB2344D78D7F /* Pods-speedoTransferTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +863,7 @@
 		};
 		7CB462FD2C812CD600C6F795 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FE020021F1691D916586A4B /* Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -616,6 +881,7 @@
 		};
 		7CB462FE2C812CD600C6F795 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22DEE18B507D82DFD7471FE8 /* Pods-speedoTransfer-speedoTransferUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
