@@ -1,8 +1,11 @@
 import UIKit
 
 class ConfirmationViewController: UIViewController {
+    var amount: Double?
+    var receiverName: String?
+    
     let profilevc = MoreProfileVC()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Transfer"
@@ -11,7 +14,7 @@ class ConfirmationViewController: UIViewController {
         setupUI()
         setupButtons() // Call the function to add the buttons
     }
-
+    
     private func setupUI() {
         view.backgroundColor = .white
         
@@ -48,7 +51,7 @@ class ConfirmationViewController: UIViewController {
         
         // Amount Section
         let amountLabel = UILabel()
-        amountLabel.text = "1000 EGP"
+        amountLabel.text = amount != nil ? "\(amount!) EGP" : "Amount not available"
         amountLabel.font = UIFont(name: "Inter-SemiBold", size: 20)
         amountLabel.textColor = UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1)
         view.addSubview(amountLabel)
@@ -73,7 +76,7 @@ class ConfirmationViewController: UIViewController {
 
         // From & To Info
         let fromView = createInfoView(label: "From", name: "Asmaa Dosuky", account: "Account xxxx7890", color: UIColor(red: 0.95, green: 0.91, blue: 0.92, alpha: 1))
-        let toView = createInfoView(label: "To", name: "Jonathon Smith", account: "Account xxxx7890", color: UIColor(red: 0.95, green: 0.91, blue: 0.92, alpha: 1))
+        let toView = createInfoView(label: "To", name: receiverName ?? "Receiver not available", account: "Account xxxx7890", color: UIColor(red: 0.95, green: 0.91, blue: 0.92, alpha: 1))
         
         detailsStack.addArrangedSubview(fromView)
         detailsStack.addArrangedSubview(toView)
@@ -197,6 +200,7 @@ class ConfirmationViewController: UIViewController {
         ])
         return line
     }
+    
     private func createInfoView(label: String, name: String, account: String, color: UIColor) -> UIView {
         let container = UIView()
         container.backgroundColor = color
@@ -241,4 +245,3 @@ class ConfirmationViewController: UIViewController {
         return container
     }
 }
-

@@ -1,19 +1,18 @@
 import UIKit
 import Alamofire
 
-// Model for Transaction data
+// Define a unique name for the model to avoid conflicts
 struct TransferTransaction: Codable {
     let id: Int
-    let senderAccount: String
     let receiverName: String
-    let receiverAccount: String
-    let status: String
     let amount: Double
 }
 
 class TransferViewController: UIViewController {
-
+    
     private let profileVc = MoreProfileVC()
+    private var amountTextField: UITextField?
+    private var receiverNameTextField: UITextField?
     
     static func create() -> TransferViewController {
         return TransferViewController()
@@ -76,37 +75,11 @@ class TransferViewController: UIViewController {
             continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             continueButton.heightAnchor.constraint(equalToConstant: 50),
         ])
-
-        // Fetch transactions from the API
+        
+        // Fetch Transactions (optional)
         fetchTransactions()
     }
     
-    // Alamofire API Request
-    func fetchTransactions() {
-        let url = "http://speedotransfer-backend-production-7875.up.railway.app/api/v1/account/getAllTransactions"
-        
-        AF.request(url, method: .get).validate().responseDecodable(of: [TransferTransaction].self) { response in
-            switch response.result {
-            case .success(let transactions):
-                // Handle the transactions, e.g., display them in a table or process them further
-                self.handleTransactions(transactions)
-            case .failure(let error):
-                print("Error fetching transactions: \(error)")
-                // Optionally show an alert or error message in the UI
-            }
-        }
-    }
-
-    // Process or display the fetched transactions
-    func handleTransactions(_ transactions: [TransferTransaction]) {
-        // You can update the UI, reload a table view, or process the data as needed
-        for transaction in transactions {
-            print("Transaction: \(transaction.receiverName) - \(transaction.amount)")
-        }
-    }
-    
-    // UI Creation Functions
-
     func createStepperView() -> UIView {
         let container = UIStackView()
         container.axis = .horizontal
@@ -183,17 +156,17 @@ class TransferViewController: UIViewController {
         titleLabel.font = UIFont(name: "Inter-Regular", size: 16)
         titleLabel.textColor = UIColor(red: 0.24, green: 0.23, blue: 0.22, alpha: 1.0)
         
-        let amountTextField = UITextField()
-        amountTextField.placeholder = "Enter amount"
-        amountTextField.font = UIFont(name: "Inter-SemiBold", size: 20)
-        amountTextField.textColor = UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
-        amountTextField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
-        amountTextField.layer.cornerRadius = 6
-        amountTextField.layer.borderWidth = 0.75
-        amountTextField.layer.borderColor = UIColor.lightGray.cgColor
-        amountTextField.textAlignment = .center
+        amountTextField = UITextField()
+        amountTextField?.placeholder = "Enter amount"
+        amountTextField?.font = UIFont(name: "Inter-SemiBold", size: 20)
+        amountTextField?.textColor = UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
+        amountTextField?.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
+        amountTextField?.layer.cornerRadius = 6
+        amountTextField?.layer.borderWidth = 0.75
+        amountTextField?.layer.borderColor = UIColor.lightGray.cgColor
+        amountTextField?.textAlignment = .center
         
-        let stack = UIStackView(arrangedSubviews: [titleLabel, amountTextField])
+        let stack = UIStackView(arrangedSubviews: [titleLabel, amountTextField!])
         stack.axis = .vertical
         stack.spacing = 8
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -220,12 +193,12 @@ class TransferViewController: UIViewController {
         titleLabel.font = UIFont(name: "Inter-Medium", size: 16)
         titleLabel.textColor = UIColor(red: 0.24, green: 0.23, blue: 0.22, alpha: 1.0)
         
-        let receiverNameField = createTextField(placeholder: "Receiver Name")
-        let receiverAccountField = createTextField(placeholder: "Receiver Account")
+        receiverNameTextField = createTextField(placeholder: "Recipient Name")
+        let accountField = createTextField(placeholder: "Recipient Account Number")
         
-        let stack = UIStackView(arrangedSubviews: [titleLabel, receiverNameField, receiverAccountField])
+        let stack = UIStackView(arrangedSubviews: [titleLabel, receiverNameTextField!, accountField])
         stack.axis = .vertical
-        stack.spacing = 12
+        stack.spacing = 16
         stack.translatesAutoresizingMaskIntoConstraints = false
         
         container.addSubview(stack)
@@ -243,43 +216,90 @@ class TransferViewController: UIViewController {
     func createTextField(placeholder: String) -> UITextField {
         let textField = UITextField()
         textField.placeholder = placeholder
-        textField.font = UIFont(name: "Inter-Regular", size: 16)
+        textField.font = UIFont(name: "Inter-Regular", size: 14)
         textField.textColor = UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
+        textField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
         textField.layer.cornerRadius = 6
         textField.layer.borderWidth = 0.75
         textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1.0)
-        textField.textAlignment = .center
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            textField.heightAnchor.constraint(equalToConstant: 40),
-        ])
-        
+        textField.paddingLeft(8)
         return textField
     }
     
     func createFavoritesButton() -> UIButton {
-        let button = UIButton(type: .system)
-        button.setTitle("Add to Favorites", for: .normal)
+        let button = UIButton()
+        button.setTitle("Favorites", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Inter-Medium", size: 14)
         button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
-        button.layer.cornerRadius = 6
+        button.layer.cornerRadius = 5
         button.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add target-action
+        button.addTarget(self, action: #selector(didTapFavoritesButton), for: .touchUpInside)
         
         return button
     }
     
+    @objc func didTapFavoritesButton() {
+        print("Favorites button tapped")
+        // Add your functionality here, like showing a list of favorite recipients
+    }
+    
     func createContinueButton() -> UIButton {
-        let button = UIButton(type: .system)
+        let button = UIButton()
         button.setTitle("Continue", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Inter-SemiBold", size: 16)
         button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 5
         button.translatesAutoresizingMaskIntoConstraints = false
         
+        // Add target-action
+        button.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
+        
         return button
+    }
+    
+    @objc func didTapContinueButton() {
+        guard let amountText = amountTextField?.text, let amount = Double(amountText),
+              let receiverName = receiverNameTextField?.text, !receiverName.isEmpty else {
+            // Handle empty fields
+            print("Amount or receiver name is missing.")
+            return
+        }
+        
+        let confirmationVC = ConfirmationViewController()
+        confirmationVC.amount = amount
+        confirmationVC.receiverName = receiverName
+        navigationController?.pushViewController(confirmationVC, animated: true)
+    }
+    
+    func fetchTransactions() {
+        let url = "http://speedotransfer-backend-production-7875.up.railway.app/api/transactions/transfer"
+        
+        AF.request(url, method: .get).validate().responseDecodable(of: [TransferTransaction].self) { response in
+            switch response.result {
+            case .success(let transactions):
+                // Handle the transactions, e.g., display them in a table or process them further
+                self.handleTransactions(transactions)
+            case .failure(let error):
+                print("Error fetching transactions: \(error)")
+                // Optionally show an alert or error message in the UI
+            }
+        }
+    }
+    
+    func handleTransactions(_ transactions: [TransferTransaction]) {
+        // You can update the UI, reload a table view, or process the data as needed
+        for transaction in transactions {
+            print("Transaction: \(transaction.receiverName) - \(transaction.amount)")
+        }
+    }
+}
+
+extension UITextField {
+    func paddingLeft(_ amount: CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
     }
 }

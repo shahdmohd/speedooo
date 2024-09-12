@@ -1,10 +1,9 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
-
     // MARK: - Properties
     private let successMessageLabel = UILabel()
-    private let transferAmountLabel = UILabel() // Label for transfer amount
+    private let transferAmountLabel = UILabel()
     private let stepperStackView = UIStackView()
     private let fromCardView = UIView()
     private let toCardView = UIView()
@@ -12,16 +11,17 @@ class PaymentViewController: UIViewController {
     private let backButton = UIButton()
     private let addToFavouriteButton = UIButton()
     private let bottomBar = UIView()
+    
     let profilevc = MoreProfileVC()
-
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        profilevc.secondBackgroundColor(to: view) // Set background color
+        profilevc.secondBackgroundColor(to: view)
         
-        // Example: Update transfer amount dynamically (simulating API response)
-        updateTransferAmount(with: "$500")
+        // Update the transfer amount with the shared value
+        //updateTransferAmount()
     }
     
     // MARK: - Setup View
@@ -37,7 +37,7 @@ class PaymentViewController: UIViewController {
     // MARK: - Setup Success Message
     private func setupSuccessMessage() {
         successMessageLabel.text = "The Transfer was successful"
-        successMessageLabel.font = UIFont(name: "Inter-Bold", size: 18) // Make text bold
+        successMessageLabel.font = UIFont(name: "Inter-Bold", size: 18)
         successMessageLabel.textColor = UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
         successMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -49,9 +49,10 @@ class PaymentViewController: UIViewController {
     }
 
     // MARK: - Update Transfer Amount
-    func updateTransferAmount(with amount: String) {
-        transferAmountLabel.text = "Transfer Amount \(amount)"
-    }
+//    func updateTransferAmount() {
+//        let amount = TransferManager.shared.transferAmount
+//        transferAmountLabel.text = amount != nil ? "The transfer amount is \(amount!)" : "Amount not available"
+//    }
 
     // MARK: - Setup Stepper
     private func setupStepper() {
@@ -129,7 +130,6 @@ class PaymentViewController: UIViewController {
 
     // MARK: - Setup Buttons
     private func setupButtons() {
-        // Setup backButton
         backButton.setTitle("Back to Home", for: .normal)
         backButton.titleLabel?.font = UIFont(name: "Inter", size: 16)
         backButton.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
@@ -137,21 +137,21 @@ class PaymentViewController: UIViewController {
         backButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(backButton)
         
-        // Setup addToFavouriteButton with matching border and text color
         addToFavouriteButton.setTitle("Add to Favourite", for: .normal)
         addToFavouriteButton.titleLabel?.font = UIFont(name: "Inter", size: 16)
         let borderColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
         addToFavouriteButton.layer.borderColor = borderColor.cgColor
         addToFavouriteButton.layer.borderWidth = 0.75
         addToFavouriteButton.layer.cornerRadius = 6
-        addToFavouriteButton.setTitleColor(borderColor, for: .normal) // Set text color same as border
-        addToFavouriteButton.backgroundColor = .clear // Make background transparent
+        addToFavouriteButton.setTitleColor(borderColor, for: .normal)
+        addToFavouriteButton.backgroundColor = .clear
         addToFavouriteButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(addToFavouriteButton)
         
-        // Setup transferAmountLabel in the bottom-left corner
-        transferAmountLabel.font = UIFont(name: "Inter", size: 18)
+        // Setup transferAmountLabel
+        transferAmountLabel.font = UIFont(name: "Inter-SemiBold", size: 20)
         transferAmountLabel.textColor = UIColor(red: 0.14, green: 0.13, blue: 0.12, alpha: 1.0)
+        transferAmountLabel.textAlignment = .center
         transferAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(transferAmountLabel)
         
@@ -166,8 +166,8 @@ class PaymentViewController: UIViewController {
             addToFavouriteButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             addToFavouriteButton.heightAnchor.constraint(equalToConstant: 56),
             
-            transferAmountLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            transferAmountLabel.bottomAnchor.constraint(equalTo: addToFavouriteButton.topAnchor, constant: -8)
+            transferAmountLabel.topAnchor.constraint(equalTo: addToFavouriteButton.bottomAnchor, constant: 24),
+            transferAmountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
