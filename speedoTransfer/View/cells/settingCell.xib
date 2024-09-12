@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" rowHeight="71" id="PJX-J1-2d3" customClass="moreProfileCell" customModule="try" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PJX-J1-2d3" id="Xp2-1j-QIr">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="y1z-8l-CYe">
+                        <rect key="frame" x="0.0" y="17" width="40" height="40"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zM-zL-cJo">
+                        <rect key="frame" x="48" y="17" width="222" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVi-7v-pAC">
+                        <rect key="frame" x="48" y="37" width="222" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chevron" translatesAutoresizingMaskIntoConstraints="NO" id="yPG-7p-j65">
+                        <rect key="frame" x="319" y="20" width="24" height="35.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yPG-7p-j65" firstAttribute="height" secondItem="y1z-8l-CYe" secondAttribute="height" constant="-4.5" id="4cY-Qf-Q3F"/>
+                    <constraint firstItem="yPG-7p-j65" firstAttribute="width" secondItem="y1z-8l-CYe" secondAttribute="width" multiplier="2.34483" constant="-69.793199999999999" id="Ak2-GY-8nC"/>
+                    <constraint firstItem="y1z-8l-CYe" firstAttribute="centerY" secondItem="Xp2-1j-QIr" secondAttribute="centerY" id="Cne-2k-MdE"/>
+                    <constraint firstItem="y1z-8l-CYe" firstAttribute="centerX" secondItem="Xp2-1j-QIr" secondAttribute="centerX" constant="-151.5" id="GO9-pP-HgL"/>
+                    <constraint firstItem="gVi-7v-pAC" firstAttribute="width" secondItem="Xp2-1j-QIr" secondAttribute="width" multiplier="0.64723" id="OOV-ov-LgQ"/>
+                    <constraint firstItem="y1z-8l-CYe" firstAttribute="width" secondItem="Xp2-1j-QIr" secondAttribute="width" multiplier="0.0845481" constant="11.000001699999999" id="bb3-BP-UAu"/>
+                    <constraint firstItem="1zM-zL-cJo" firstAttribute="leading" secondItem="y1z-8l-CYe" secondAttribute="trailing" constant="8" id="beW-w6-zYg"/>
+                    <constraint firstItem="gVi-7v-pAC" firstAttribute="trailing" secondItem="y1z-8l-CYe" secondAttribute="trailing" constant="230" id="cLT-gp-JdW"/>
+                    <constraint firstItem="1zM-zL-cJo" firstAttribute="width" secondItem="y1z-8l-CYe" secondAttribute="width" multiplier="7.65517" constant="-84.206799999999987" id="cb5-6n-yDM"/>
+                    <constraint firstItem="yPG-7p-j65" firstAttribute="top" secondItem="y1z-8l-CYe" secondAttribute="bottom" constant="-37" id="fJ8-jd-Sfe"/>
+                    <constraint firstItem="gVi-7v-pAC" firstAttribute="centerY" secondItem="y1z-8l-CYe" secondAttribute="centerY" constant="10" id="khl-pm-6Rc"/>
+                    <constraint firstItem="1zM-zL-cJo" firstAttribute="height" secondItem="y1z-8l-CYe" secondAttribute="height" multiplier="1.425" constant="-37" id="kk5-fK-v6I"/>
+                    <constraint firstItem="gVi-7v-pAC" firstAttribute="height" secondItem="Xp2-1j-QIr" secondAttribute="height" multiplier="0.27027" id="oDy-HK-T9Z"/>
+                    <constraint firstItem="1zM-zL-cJo" firstAttribute="centerY" secondItem="y1z-8l-CYe" secondAttribute="centerY" constant="-10" id="pDG-WF-GeX"/>
+                    <constraint firstItem="y1z-8l-CYe" firstAttribute="height" secondItem="Xp2-1j-QIr" secondAttribute="height" multiplier="0.701754" constant="-11.929795999999996" id="qdp-fV-fOO"/>
+                    <constraint firstItem="gVi-7v-pAC" firstAttribute="top" secondItem="1zM-zL-cJo" secondAttribute="top" constant="20" id="vcd-Sd-4oL"/>
+                    <constraint firstItem="yPG-7p-j65" firstAttribute="centerX" secondItem="y1z-8l-CYe" secondAttribute="centerX" constant="311" id="w56-fZ-65O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="FiD-XS-BBM"/>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="firstLabel" destination="1zM-zL-cJo" id="50h-Wr-p3x"/>
+                <outlet property="iconImage" destination="y1z-8l-CYe" id="2FG-Zv-fO1"/>
+                <outlet property="navIcon" destination="yPG-7p-j65" id="cgE-iB-RFk"/>
+                <outlet property="secondLabel" destination="gVi-7v-pAC" id="dNk-U0-IHw"/>
+            </connections>
+            <point key="canvasLocation" x="-73" y="5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Chevron" width="24" height="24"/>
+        <image name="user" width="24" height="24"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

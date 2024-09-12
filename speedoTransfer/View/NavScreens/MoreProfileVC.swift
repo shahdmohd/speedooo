@@ -20,8 +20,8 @@ class MoreProfileVC: UIViewController {
     
     
     let icons : [String] = ["Group", "favorite", "user","help"]
-    let tasks : [String] = ["Transfer From Website", "Favourites", "Profile","Help"]
-    let texts : [String] = ["Transfer From Website", "Favourites", "Profile","Help"]
+    let tasks : [String] = ["Personal Information", "Setting", "Payment History","My Favourite List"]
+    let texts : [String] = ["Tyour info ", "Change settings", "View your Transactions","Help"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,9 +103,9 @@ extension MoreProfileVC: profileCellDelegate {
             let selectedTask = tasks[indexPath.row]
             
             // Check for "Profile" task and navigate to MoreProfileVC
-            if selectedTask == "Personal information" {
+            if selectedTask == "Setting" {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
-                               if let profileVC = storyboard.instantiateViewController(withIdentifier: "TransactionsVC") as? TransactionsVC {
+                               if let profileVC = storyboard.instantiateViewController(withIdentifier: "settings") as? settings {
                                    navigationController?.pushViewController(profileVC, animated: true)
                                }
                                
