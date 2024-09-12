@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prj-CO-7lG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9337.68115942029" y="18.75"/>
+            <point key="canvasLocation" x="9594" y="59"/>
         </scene>
         <!--Internet IssueVC-->
         <scene sceneID="o5A-al-nag">
@@ -379,7 +379,7 @@
         <!--More ProfileVC-->
         <scene sceneID="rSq-Wz-jsX">
             <objects>
-                <viewController storyboardIdentifier="MoreProfileVC" id="M3Y-cY-zb9" customClass="MoreProfileVC" customModule="try" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoreProfileVC" id="M3Y-cY-zb9" customClass="MoreProfileVC" customModule="speedoTransfer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NAr-5W-w6t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,6 +418,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKM-lu-rqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7211.594202898551" y="83.705357142857139"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="eos-X7-xzL">
+            <objects>
+                <viewController storyboardIdentifier="Settings" id="eG4-fV-YSf" customClass="Settings" customModule="try" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z5f-Af-7Of">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-e1-tzP">
+                                <rect key="frame" x="20" y="136" width="374" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mne-Bi-UnZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mne-Bi-UnZ" firstAttribute="bottom" secondItem="4wf-e1-tzP" secondAttribute="bottom" constant="16" id="IQ5-qm-aSt"/>
+                            <constraint firstItem="4wf-e1-tzP" firstAttribute="top" secondItem="mne-Bi-UnZ" secondAttribute="top" constant="92" id="NGG-aF-dL1"/>
+                            <constraint firstItem="4wf-e1-tzP" firstAttribute="leading" secondItem="mne-Bi-UnZ" secondAttribute="leading" constant="20" id="pAL-O4-nwh"/>
+                            <constraint firstItem="mne-Bi-UnZ" firstAttribute="trailing" secondItem="4wf-e1-tzP" secondAttribute="trailing" constant="20" id="vTV-8F-aef"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="settingTV" destination="4wf-e1-tzP" id="4bt-RD-Mrg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcX-FW-XU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8865" y="84"/>
         </scene>
     </scenes>
     <resources>
