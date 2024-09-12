@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moreProfileCell" rowHeight="71" id="QBA-fG-7WC" customClass="moreProfileCell" customModule="speedoTransfer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QBA-fG-7WC" id="sZd-xY-I5g">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Gjw-ev-Jcq">
+                        <rect key="frame" x="0.0" y="17" width="40" height="40"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lje-Lf-aqK">
+                        <rect key="frame" x="48" y="17" width="222" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ay-mc-FvP">
+                        <rect key="frame" x="48" y="37" width="222" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chevron" translatesAutoresizingMaskIntoConstraints="NO" id="Wvk-OX-456">
+                        <rect key="frame" x="319" y="20" width="24" height="35.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gjw-ev-Jcq" firstAttribute="height" secondItem="sZd-xY-I5g" secondAttribute="height" multiplier="0.701754" constant="-11.929795999999996" id="1Wd-Ed-ZOZ"/>
+                    <constraint firstItem="6Ay-mc-FvP" firstAttribute="trailing" secondItem="Gjw-ev-Jcq" secondAttribute="trailing" constant="230" id="2e1-qk-OPH"/>
+                    <constraint firstItem="Gjw-ev-Jcq" firstAttribute="width" secondItem="sZd-xY-I5g" secondAttribute="width" multiplier="0.0845481" constant="11.000001699999999" id="4g1-j2-b35"/>
+                    <constraint firstItem="6Ay-mc-FvP" firstAttribute="centerY" secondItem="Gjw-ev-Jcq" secondAttribute="centerY" constant="10" id="55a-1C-WLL"/>
+                    <constraint firstItem="Gjw-ev-Jcq" firstAttribute="centerY" secondItem="sZd-xY-I5g" secondAttribute="centerY" id="7IO-W9-PFh"/>
+                    <constraint firstItem="6Ay-mc-FvP" firstAttribute="top" secondItem="lje-Lf-aqK" secondAttribute="top" constant="20" id="Hyy-k3-jWm"/>
+                    <constraint firstItem="lje-Lf-aqK" firstAttribute="centerY" secondItem="Gjw-ev-Jcq" secondAttribute="centerY" constant="-10" id="JTy-k2-w1U"/>
+                    <constraint firstItem="Wvk-OX-456" firstAttribute="height" secondItem="Gjw-ev-Jcq" secondAttribute="height" constant="-4.5" id="OnQ-m7-g5y"/>
+                    <constraint firstItem="Wvk-OX-456" firstAttribute="centerX" secondItem="Gjw-ev-Jcq" secondAttribute="centerX" constant="311" id="Sgi-Zd-P7B"/>
+                    <constraint firstItem="6Ay-mc-FvP" firstAttribute="height" secondItem="sZd-xY-I5g" secondAttribute="height" multiplier="0.27027" id="aNP-wV-68x"/>
+                    <constraint firstItem="lje-Lf-aqK" firstAttribute="height" secondItem="Gjw-ev-Jcq" secondAttribute="height" multiplier="1.425" constant="-37" id="dan-s3-4qP"/>
+                    <constraint firstItem="Wvk-OX-456" firstAttribute="top" secondItem="Gjw-ev-Jcq" secondAttribute="bottom" constant="-37" id="e0A-Yx-FGp"/>
+                    <constraint firstItem="lje-Lf-aqK" firstAttribute="leading" secondItem="Gjw-ev-Jcq" secondAttribute="trailing" constant="8" id="gSW-eD-ZEe"/>
+                    <constraint firstItem="Gjw-ev-Jcq" firstAttribute="centerX" secondItem="sZd-xY-I5g" secondAttribute="centerX" constant="-151.5" id="j41-oa-kj8"/>
+                    <constraint firstItem="lje-Lf-aqK" firstAttribute="width" secondItem="Gjw-ev-Jcq" secondAttribute="width" multiplier="7.65517" constant="-84.206799999999987" id="pTg-1t-yGK"/>
+                    <constraint firstItem="6Ay-mc-FvP" firstAttribute="width" secondItem="sZd-xY-I5g" secondAttribute="width" multiplier="0.64723" id="rzM-nV-UIh"/>
+                    <constraint firstItem="Wvk-OX-456" firstAttribute="width" secondItem="Gjw-ev-Jcq" secondAttribute="width" multiplier="2.34483" constant="-69.793199999999999" id="xDq-tq-m1X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="8yB-ZF-sY3"/>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="firstLabel" destination="lje-Lf-aqK" id="Xud-52-bar"/>
+                <outlet property="iconImage" destination="Gjw-ev-Jcq" id="Pft-lL-BrX"/>
+                <outlet property="navIcon" destination="Wvk-OX-456" id="kFt-bV-6WA"/>
+                <outlet property="secondLabel" destination="6Ay-mc-FvP" id="rqV-Te-eVn"/>
+            </connections>
+            <point key="canvasLocation" x="-73" y="5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Chevron" width="24" height="24"/>
+        <image name="user" width="24" height="24"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
