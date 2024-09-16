@@ -81,6 +81,31 @@ class TransferViewController: UIViewController {
         ])
     }
     
+    // Action to present FavoritesListViewController modally
+        @IBAction func presentFavorites() {
+            let favoritesVC = FavoritesListViewController()
+            favoritesVC.modalPresentationStyle = .pageSheet
+            
+            // Configure presentation controller if needed
+            if let sheet = favoritesVC.presentationController as? UISheetPresentationController {
+                sheet.detents = [.medium()] // Adjust the detent to match your desired height
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+            
+            present(favoritesVC, animated: true) {
+                // Customize the presented view controller's view for rounded corners
+                self.roundCorners(of: favoritesVC.view, radius: 16)
+            }
+        }
+
+        private func roundCorners(of view: UIView, radius: CGFloat) {
+            if let presentedView = view.superview {
+                presentedView.layer.cornerRadius = radius
+                presentedView.layer.masksToBounds = true
+                presentedView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner] // Apply rounding to top corners
+            }
+        }
+    
     func createStepperView() -> UIView {
         let container = UIStackView()
         container.axis = .horizontal
@@ -227,24 +252,19 @@ class TransferViewController: UIViewController {
         return textField
     }
     
-    func createFavoritesButton() -> UIButton {
-        let button = UIButton()
-        button.setTitle("Favorites", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
-        button.layer.cornerRadius = 5
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Add target-action
-        button.addTarget(self, action: #selector(didTapFavoritesButton), for: .touchUpInside)
-        
-        return button
-    }
     
-    @objc func didTapFavoritesButton() {
-        print("Favorites button tapped")
-        // Add your functionality here, like showing a list of favorite recipients
-    }
+    
+    func createFavoritesButton() -> UIButton {
+            let button = UIButton(type: .system)
+            button.setTitle("Favorites", for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = UIColor(red: 0.53, green: 0.12, blue: 0.21, alpha: 1.0)
+            button.layer.cornerRadius = 8
+            button.addTarget(self, action: #selector(presentFavorites), for: .touchUpInside)
+            button.clipsToBounds = true
+            button.translatesAutoresizingMaskIntoConstraints = false
+            return button
+        }
     
     func createContinueButton() -> UIButton {
         let button = UIButton()

@@ -17,7 +17,7 @@ class MoreVC: UIViewController {
     @IBOutlet var moreTableView: UITableView!
     
     let icons : [String] = ["Group", "favorite", "user","help", "logout"]
-    let tasks : [String] = ["Transfer From Website", "Favourites", "Profile","Help", "logout"]
+    let tasks : [String] = ["Transfer From Website", "Favourites", "Profile","Help", "Logout"]
     let profileVc = MoreProfileVC()
 
     override func viewDidLoad() {
@@ -92,6 +92,27 @@ extension MoreVC: MoreTVCellDelegate {
                        navigationController?.pushViewController(favouriteVC, animated: true)
                    }
         }
-    }
-}
-}
+            else if selectedTask == "Logout" {
+                            // Clear session data or user information
+                            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+                            
+                            // Instantiate the SignInViewController using the storyboard
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            
+                            if let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController {
+                                
+                                // Set the new root view controller to SignInViewController
+                                if let window = UIApplication.shared.windows.first {
+                                    window.rootViewController = UINavigationController(rootViewController: signInVC)
+                                    window.makeKeyAndVisible()
+                                    
+                                    // Optionally, you can add a nice transition effect
+                                    let options: UIView.AnimationOptions = .transitionFlipFromLeft
+                                    UIView.transition(with: window, duration: 0.5, options: options, animations: nil, completion: nil)
+                                }
+                            }
+                        }
+
+                }
+            }
+            }

@@ -16,13 +16,17 @@
 		6A0B33262C908FA300CFADFC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B33252C908FA300CFADFC /* SignInViewController.swift */; };
 		6A0B33282C908FA500CFADFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B33272C908FA500CFADFC /* HomeViewController.swift */; };
 		6A0B332A2C908FA800CFADFC /* FirstSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0B33292C908FA800CFADFC /* FirstSignUpViewController.swift */; };
+		6A3DC7522C9301D2000E9A90 /* settingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC7512C9301D2000E9A90 /* settingCell.swift */; };
+		6A3DC7542C9301DB000E9A90 /* settingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3DC7532C9301DB000E9A90 /* settingCell.xib */; };
 		6A4229AE2C92AC3300AD324E /* CountrySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4229AD2C92AC3300AD324E /* CountrySelectionViewController.swift */; };
+		6A598AE42C92F64B00B44878 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A598AE32C92F64B00B44878 /* EditProfileViewController.swift */; };
 		6ADCC2642C91A8E4007F05F0 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC2632C91A8E4007F05F0 /* CustomPresentationController.swift */; };
 		6ADCC2662C91ACBE007F05F0 /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC2652C91ACBE007F05F0 /* FavoritesListView.swift */; };
 		6ADCC2682C91B67B007F05F0 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC2672C91B67B007F05F0 /* ConfirmationViewController.swift */; };
 		6ADCC26C2C91E403007F05F0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCC26B2C91E403007F05F0 /* PaymentViewController.swift */; };
 		6AFD3AAA2C92E341009D752A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD3AA92C92E341009D752A /* AuthManager.swift */; };
 		6AFD3AAC2C92E36D009D752A /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD3AAB2C92E36D009D752A /* Labels.swift */; };
+		6AFD3AAE2C92F525009D752A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD3AAD2C92F525009D752A /* Settings.swift */; };
 		6D68317B0D7233994B03CC2F /* Pods_speedoTransfer_speedoTransferUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237511779FDC25552F79D1BD /* Pods_speedoTransfer_speedoTransferUITests.framework */; };
 		6F0CC080F9AC1DE20881F882 /* Pods_speedoTransferTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289580A4BFC1D3B7D5FDD3BB /* Pods_speedoTransferTests.framework */; };
 		7C2053E12C92DBC000189BE6 /* moreProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2053DF2C92DBC000189BE6 /* moreProfileCell.swift */; };
@@ -79,14 +83,18 @@
 		6A0B33252C908FA300CFADFC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6A0B33272C908FA500CFADFC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6A0B33292C908FA800CFADFC /* FirstSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpViewController.swift; sourceTree = "<group>"; };
+		6A3DC7512C9301D2000E9A90 /* settingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingCell.swift; sourceTree = "<group>"; };
+		6A3DC7532C9301DB000E9A90 /* settingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingCell.xib; sourceTree = "<group>"; };
 		6A4229AD2C92AC3300AD324E /* CountrySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectionViewController.swift; sourceTree = "<group>"; };
 		6A540F752C908263003C14B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6A598AE32C92F64B00B44878 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		6ADCC2632C91A8E4007F05F0 /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 		6ADCC2652C91ACBE007F05F0 /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 		6ADCC2672C91B67B007F05F0 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		6ADCC26B2C91E403007F05F0 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		6AFD3AA92C92E341009D752A /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		6AFD3AAB2C92E36D009D752A /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		6AFD3AAD2C92F525009D752A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6FE020021F1691D916586A4B /* Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig"; path = "Target Support Files/Pods-speedoTransfer-speedoTransferUITests/Pods-speedoTransfer-speedoTransferUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C2053DF2C92DBC000189BE6 /* moreProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreProfileCell.swift; sourceTree = "<group>"; };
 		7C2053E02C92DBC000189BE6 /* moreProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = moreProfileCell.xib; sourceTree = "<group>"; };
@@ -255,6 +263,8 @@
 		7CE881D62C924DFA004FBD19 /* NavScreens */ = {
 			isa = PBXGroup;
 			children = (
+				6A598AE32C92F64B00B44878 /* EditProfileViewController.swift */,
+				6AFD3AAD2C92F525009D752A /* Settings.swift */,
 				7C40FB1C2C8DCF5800A55D81 /* MoreVC.swift */,
 				6ADCC2672C91B67B007F05F0 /* ConfirmationViewController.swift */,
 				7C40FB2C2C8E287800A55D81 /* TransactionsVC.swift */,
@@ -281,6 +291,8 @@
 		7CE881D82C924EE6004FBD19 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				6A3DC7532C9301DB000E9A90 /* settingCell.xib */,
+				6A3DC7512C9301D2000E9A90 /* settingCell.swift */,
 				6A0B331F2C908E9000CFADFC /* TransactionCell.swift */,
 				7C9415032C91B4DB00FED40B /* favListCellTableViewCell.swift */,
 				7C9415042C91B4DB00FED40B /* favListCellTableViewCell.xib */,
@@ -438,6 +450,7 @@
 				7C40FB212C8DD0B600A55D81 /* MoreTVCell.xib in Resources */,
 				6A0B331C2C908AEE00CFADFC /* Main.storyboard in Resources */,
 				7C2053E22C92DBC000189BE6 /* moreProfileCell.xib in Resources */,
+				6A3DC7542C9301DB000E9A90 /* settingCell.xib in Resources */,
 				7CB462DC2C812CD600C6F795 /* LaunchScreen.storyboard in Resources */,
 				7CB462D92C812CD600C6F795 /* Assets.xcassets in Resources */,
 				7C9415062C91B4DB00FED40B /* favListCellTableViewCell.xib in Resources */,
@@ -574,6 +587,7 @@
 				6ADCC2642C91A8E4007F05F0 /* CustomPresentationController.swift in Sources */,
 				6A0B33202C908E9000CFADFC /* TransactionCell.swift in Sources */,
 				7C40FB302C8E2B5600A55D81 /* My_cardsVC.swift in Sources */,
+				6A3DC7522C9301D2000E9A90 /* settingCell.swift in Sources */,
 				6A0B33282C908FA500CFADFC /* HomeViewController.swift in Sources */,
 				6ADCC2682C91B67B007F05F0 /* ConfirmationViewController.swift in Sources */,
 				7C40FB1D2C8DCF5800A55D81 /* MoreVC.swift in Sources */,
@@ -581,6 +595,7 @@
 				7C4BFFFB2C91877E00AA2C53 /* FavouriteVC.swift in Sources */,
 				6A0B33222C908F8100CFADFC /* SignUpViewController.swift in Sources */,
 				7C40FB202C8DD0B600A55D81 /* MoreTVCell.swift in Sources */,
+				6A598AE42C92F64B00B44878 /* EditProfileViewController.swift in Sources */,
 				6ADCC2662C91ACBE007F05F0 /* FavoritesListView.swift in Sources */,
 				6A0B33262C908FA300CFADFC /* SignInViewController.swift in Sources */,
 				7C6EA3C02C907A33001A3611 /* DemoViewController.swift 15-50-55-050.swift in Sources */,
@@ -588,6 +603,7 @@
 				7CE881D02C922D1C004FBD19 /* InternetIssueVC.swift in Sources */,
 				7CE881D22C923B20004FBD19 /* editPopUpMenueVC.swift in Sources */,
 				6AFD3AAA2C92E341009D752A /* AuthManager.swift in Sources */,
+				6AFD3AAE2C92F525009D752A /* Settings.swift in Sources */,
 				6A0B331B2C9089C500CFADFC /* SceneDelegate.swift in Sources */,
 				6A0B33242C908FA000CFADFC /* TransferViewController.swift in Sources */,
 				7CE881CE2C922CBB004FBD19 /* ErrorVC.swift in Sources */,

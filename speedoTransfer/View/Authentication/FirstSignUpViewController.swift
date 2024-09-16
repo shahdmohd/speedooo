@@ -38,26 +38,26 @@ class FirstSignUpViewController: UIViewController {
         container.addSubview(subtitleLabel)
 
         // Country Label and Field
-        let countryLabel = UILabel()
-        countryLabel.text = "Country"
-        countryLabel.font = UIFont.systemFont(ofSize: 16)
-        countryLabel.textColor = UIColor(red: 0.24, green: 0.23, blue: 0.22, alpha: 1.0)
-        countryLabel.translatesAutoresizingMaskIntoConstraints = false
-        container.addSubview(countryLabel)
+                let countryLabel = UILabel()
+                countryLabel.text = "Date of birth"
+                countryLabel.font = UIFont.systemFont(ofSize: 16)
+                countryLabel.textColor = UIColor(red: 0.24, green: 0.23, blue: 0.22, alpha: 1.0)
+                countryLabel.translatesAutoresizingMaskIntoConstraints = false
+                container.addSubview(countryLabel)
 
-        let countryField = createTextField(placeholder: "Select your country")
-        container.addSubview(countryField)
+                let countryField = createTextField(placeholder: "DD/MM/YYYY")
+                container.addSubview(countryField)
 
-        // Date of Birth Label and Field
-        let dobLabel = UILabel()
-        dobLabel.text = "Date Of Birth"
-        dobLabel.font = UIFont.systemFont(ofSize: 16)
-        dobLabel.textColor = UIColor(red: 0.24, green: 0.23, blue: 0.22, alpha: 1.0)
-        dobLabel.translatesAutoresizingMaskIntoConstraints = false
-        container.addSubview(dobLabel)
-
-        let dobField = createTextField(placeholder: "DD/MM/YYYY")
-        container.addSubview(dobField)
+//        // Date of Birth Label and Field
+//        let dobLabel = UILabel()
+//        dobLabel.text = "Date Of Birth"
+//        dobLabel.font = UIFont.systemFont(ofSize: 16)
+//        dobLabel.textColor = UIColor(red: 0.24, green: 0.23, blue: 0.22, alpha: 1.0)
+//        dobLabel.translatesAutoresizingMaskIntoConstraints = false
+//        container.addSubview(dobLabel)
+//
+//        let dobField = createTextField(placeholder: "DD/MM/YYYY")
+//        container.addSubview(dobField)
 
         // Continue Button
         let continueButton = UIButton()
@@ -112,21 +112,21 @@ class FirstSignUpViewController: UIViewController {
             countryField.topAnchor.constraint(equalTo: countryLabel.bottomAnchor, constant: 8),
             countryField.heightAnchor.constraint(equalToConstant: 50),
 
-            // Date of Birth Label
-            dobLabel.leadingAnchor.constraint(equalTo: countryLabel.leadingAnchor),
-            dobLabel.topAnchor.constraint(equalTo: countryField.bottomAnchor, constant: 24),
+//            // Date of Birth Label
+//            dobLabel.leadingAnchor.constraint(equalTo: countryLabel.leadingAnchor),
+//            dobLabel.topAnchor.constraint(equalTo: countryField.bottomAnchor, constant: 24),
 
-            // Date of Birth Field
-            dobField.leadingAnchor.constraint(equalTo: countryField.leadingAnchor),
-            dobField.trailingAnchor.constraint(equalTo: countryField.trailingAnchor),
-            dobField.topAnchor.constraint(equalTo: dobLabel.bottomAnchor, constant: 8),
-            dobField.heightAnchor.constraint(equalToConstant: 50),
+//            // Date of Birth Field
+//            dobField.leadingAnchor.constraint(equalTo: countryField.leadingAnchor),
+//            dobField.trailingAnchor.constraint(equalTo: countryField.trailingAnchor),
+//            dobField.topAnchor.constraint(equalTo: dobLabel.bottomAnchor, constant: 8),
+//            dobField.heightAnchor.constraint(equalToConstant: 50),
 
             // Continue Button
-            continueButton.leadingAnchor.constraint(equalTo: dobField.leadingAnchor),
-            continueButton.trailingAnchor.constraint(equalTo: dobField.trailingAnchor),
-            continueButton.topAnchor.constraint(equalTo: dobField.bottomAnchor, constant: 32),
-            continueButton.heightAnchor.constraint(equalToConstant: 50),
+                        continueButton.leadingAnchor.constraint(equalTo: countryField.leadingAnchor),
+                        continueButton.trailingAnchor.constraint(equalTo: countryField.trailingAnchor),
+                        continueButton.topAnchor.constraint(equalTo: countryField.bottomAnchor, constant: 32),
+                        continueButton.heightAnchor.constraint(equalToConstant: 50),
 
             // Already have an account label
             alreadyAccountLabel.topAnchor.constraint(equalTo: continueButton.bottomAnchor, constant: 16),

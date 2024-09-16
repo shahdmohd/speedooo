@@ -40,14 +40,14 @@ extension DemoViewController {
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
 
         let page1 = OnboardingViewController(imageName: "Fast loading",
-                                             titleText: "Welcome",
-                                             subtitleText: "To the Swift Arcade. Your place for learning Swift.")
+                                             titleText: "Amount",
+                                             subtitleText: "Send money fast with simple steps. Create account, Confirmation, Payment. Simple.")
         let page2 = OnboardingViewController(imageName: "Currency",
-                                             titleText: "Learn",
-                                             subtitleText: "Start your career in iOS development.")
+                                             titleText: "Confirmation",
+                                             subtitleText: "Transfer funds instantly to friends and family worldwide, strong shield protecting a money.")
         let page3 = OnboardingViewController(imageName: "Mobile payments",
-                                             titleText: "Have fun",
-                                             subtitleText: "Level Up and have fun building mobile apps.")
+                                             titleText: "Payment",
+                                             subtitleText: "Enjoy peace of mind with our secure platform  Transfer funds instantly to friends.")
         let page4 = SignUpViewController()
         
         pages.append(page1)

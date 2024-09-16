@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Load the launch view controller
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let launchViewController = storyboard.instantiateViewController(withIdentifier: "DemoViewController") as? DemoViewController {
+        if let launchViewController = storyboard.instantiateViewController(withIdentifier: "InternetIssueVC") as? InternetIssueVC {
             window?.rootViewController = launchViewController
             window?.makeKeyAndVisible()
         } else {
